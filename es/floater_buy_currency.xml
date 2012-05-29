@@ -1,96 +1,70 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<floater can_close="true" can_drag_on_left="false" can_minimize="false"
-     can_resize="false" height="270" min_height="270" min_width="350"
-     name="buy currency" title="Buy Currency" width="350">
-	<text bottom_delta="-48" follows="top|left" font="SansSerifHuge" height="24"
-	     left="16" name="info_buying" right="-20" >
-		Buying Currency:
-	</text>
-	<text bottom_delta="0" follows="top|left" font="SansSerifHuge" height="24" left="16"
-	     name="info_cannot_buy" right="-20" >
-		Cannot buy now:
-	</text>
-	<text bottom_delta="0" follows="top|left" font="SansSerifHuge" height="24" left="16"
-	     name="info_need_more" right="-20" >
-		You need more currency:
-	</text>
-	<icon bottom="-112" follows="top|left" height="64" image_name="badge_note.j2c"
-	     left="0" name="step_error" width="64" />
-	<text bottom_delta="-96" follows="top|left" height="140" left="72"
-	     name="error_message" right="-20" >
-		Something ain&apos;t right.
-	</text>
-	<button bottom_delta="-4" follows="bottom|left" height="20" label="Go to website"
-	     left="72" name="error_web" width="120" />
-	<icon bottom="-112" follows="top|left" height="64" image_name="badge_note.j2c"
-	     left="0" name="step_1" width="64" />
-	<text bottom_delta="38" follows="top|left" height="16" left="72" name="contacting"
-	     right="-20" >
-		Contacting LindeX...
-	</text>
-	<text bottom_delta="0" follows="top|left" height="16" left="72"
-	     name="buy_action_unknown" right="-20" >
-		Buy [CURRENCY] on the LindeX currency exchange
-	</text>
-	<text bottom_delta="0" follows="top|left" height="16" left="72" name="buy_action"
-	     right="-20" >
-		[NAME] [CURRENCY] [PRICE]
-	</text>
-	<text bottom_delta="-20" follows="top|left" height="16" left="72"
-	     name="currency_action"  width="40">
-		Buy [CURRENCY]
-	</text>
-	<line_editor bottom_delta="0" follows="top|right" height="16" left_delta="45"
-	     name="currency_amt" width="80">
-		1234
-	</line_editor>
-	<text bottom_delta="0" follows="top|right" height="16" left_delta="85"
-	     name="currency_est"  width="180">
-		for approx. US$ [USD]
-	</text>
-	<text bottom_delta="0" follows="top|right" height="16" left_delta="5"
-	     name="getting_data" width="180">
-		Getting data...
-	</text>
-	<text bottom_delta="-32" follows="top|left" height="16" left="80"
-	     name="balance_label" width="240">
-		You currently have
-	</text>
-	<text bottom_delta="0" follows="top|left" halign="right" height="16" left="80"
-	     name="balance_amount" width="240">
-		[CURRENCY] [AMT]
-	</text>
-	<text bottom_delta="-20" follows="top|left" height="16" left="80" name="buying_label"
-	     width="240">
-		You are buying
-	</text>
-	<text bottom_delta="0" follows="top|left" halign="right" height="16" left="80"
-	     name="buying_amount" width="240">
-		[CURRENCY] [AMT]
-	</text>
-	<text bottom_delta="-20" follows="top|left" height="16" left="80" name="total_label"
-	     width="240">
-		Your balance will be
-	</text>
-	<text bottom_delta="0" follows="top|left" halign="right" height="16" left="80"
-	     name="total_amount" width="240">
-		[CURRENCY] [AMT]
-	</text>
-	<text bottom_delta="-48" follows="top|left" height="32" left="72"
-	     name="purchase_warning_repurchase" right="-20" >
-		Confirming this purchase only buys the currency.
-You&apos;ll need to try the operation again.
-	</text>
-	<text bottom_delta="0" follows="top|left" height="32" left="72"
-	     name="purchase_warning_notenough" right="-20" >
-		You aren&apos;t buying enough currency
-Increase the amount to buy.
-	</text>
-	<button bottom_delta="-40" follows="bottom|right" height="20" label="Cancel" left="237"
-	     name="cancel_btn" width="90" />
-	<button bottom_delta="0" follows="bottom|left" height="20" label="Purchase"
-	     left_delta="-96" name="buy_btn" width="90" />
-	<string name="buy_currency">
-		Buy [CURRENCY] [LINDENS] for approx. US$ [USD]
-	</string>
+<floater name="buy currency" title="Comprar Dinero">
+	  <text name="info_buying">
+			 Comprando Dinero:
+	  </text>
+	  <text name="info_cannot_buy">
+			 No puedes comprar en este momento:
+	  </text>
+	  <text name="info_need_more">
+			 Necesitas más dinero:
+	  </text>
+	  <icon name="step_error"/>
+	  <text name="error_message" >
+			 Algo no va bien.
+	  </text>
+	  <button label="Ir al sitio web" name="error_web"/>
+	  <icon name="step_1"/>
+	  <text name="contacting">
+			 Contactando con LindeX...
+	  </text>
+	  <text name="buy_action_unknown">
+			 Comprar [CURRENCY] en el sistema LindeX de cambio
+	  </text>
+	  <text name="buy_action" >
+			 [NAME] [CURRENCY] [PRICE]
+	  </text>
+	  <text name="currency_action">
+			 Comprar [CURRENCY]
+	  </text>
+	  <line_editor name="currency_amt">
+			 1234
+	  </line_editor>
+	  <text name="currency_est">
+			  [CURRENCY] por aprox. US$ [USD]
+	  </text>
+	  <text name="getting_data">
+			 Obteniendo datos...
+	  </text>
+	  <text name="balance_label">
+			 Actualmente tienes
+	  </text>
+	  <text name="balance_amount">
+			 [CURRENCY] [AMT]
+	  </text>
+	  <text name="buying_label">
+			 Estás comprando
+	  </text>
+	  <text name="buying_amount">
+			 [CURRENCY] [AMT]
+	  </text>
+	  <text name="total_label">
+			 Tu saldo será de
+	  </text>
+	  <text name="total_amount">
+			 [CURRENCY] [AMT]
+	  </text>
+	  <text name="purchase_warning_repurchase">
+			 Confirmando esta compra sólo compras la moneda.
+Tendrá ques intentar de nuevo la operación.
+	  </text>
+	  <text name="purchase_warning_notenough">
+			 No estás comprando dinero suficiente.
+Aumenta la cantidad a comprar.
+	  </text>
+	  <button label="Cancelar" name="cancel_btn"/>
+	  <button label="Comprar" name="buy_btn"/>
+	  <string name="buy_currency">
+			 Comprar [CURRENCY] [LINDENS] por aprox. US$ [USD]
+	  </string>
 </floater>
