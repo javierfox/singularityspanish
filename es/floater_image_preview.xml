@@ -1,68 +1,55 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<floater can_close="true" can_drag_on_left="false" can_minimize="false"
-     can_resize="false" height="440" min_height="140" min_width="300"
-     name="Image Preview" title="" width="300">
-	<text bottom_delta="-40" follows="top|left" height="15" left="10" name="name_label">
-		Name:
-	</text>
-	<line_editor bottom_delta="-24" follows="top|left|right" height="19" max_length="254"
-	     name="name_form" width="280" />
-	<text bottom_delta="-20" follows="top|left" height="15" name="description_label">
-		Description:
-	</text>
-	<line_editor bottom_delta="-24" follows="top|left|right" height="19" max_length="254"
-	     name="description_form" width="280" spell_check="true" />
-	<text bottom_delta="-20" follows="top|left" height="15" name="preview_label">
-		Preview image as:
-	</text>
-	<combo_box bottom_delta="-6" follows="left|top" height="18" label="Clothing Type"
-	     left="120" name="clothing_type_combo" width="160">
-		<combo_item name="Image">
-			Image
-		</combo_item>
-		<combo_item name="Hair">
-			Hair
-		</combo_item>
-		<combo_item name="FemaleHead">
-			Female Head
-		</combo_item>
-		<combo_item name="FemaleUpperBody">
-			Female Upper Body
-		</combo_item>
-		<combo_item name="FemaleLowerBody">
-			Female Lower Body
-		</combo_item>
-		<combo_item name="MaleHead">
-			Male Head
-		</combo_item>
-		<combo_item name="MaleUpperBody">
-			Male Upper Body
-		</combo_item>
-		<combo_item name="MaleLowerBody">
-			Male Lower Body
-		</combo_item>
-		<combo_item name="Skirt">
-			Skirt
-		</combo_item>
-		<combo_item name="SculptedPrim">
-			Sculpted Prim
-		</combo_item>
-	</combo_box>
-	<text bottom="250" follows="top|left" left="10" name="bad_image_text">
-		Unable to read image.
+<floater name="Image Preview" title="">
+	  <text name="name_label">
+			 Nombre:
+	  </text>
+	  <line_editor name="name_form"/>
+	  <text name="description_label">
+			 Descripción:
+	  </text>
+	  <line_editor name="description_form"/>
+	  <text name="preview_label">
+			 Vista Previa como:
+	  </text>
+	  <combo_box label="Ropa" name="clothing_type_combo">
+			 <combo_item name="Image">
+					Imagen
+			 </combo_item>
+			 <combo_item name="Hair">
+					Pelo
+			 </combo_item>
+			 <combo_item name="FemaleHead">
+					Cabeza Femenina
+			 </combo_item>
+			 <combo_item name="FemaleUpperBody">
+					Cuerpo Superior Femenino
+			 </combo_item>
+			 <combo_item name="FemaleLowerBody">
+					Cuerpo Inferior Femenino
+			 </combo_item>
+			 <combo_item name="MaleHead">
+					Cabeza Masculina
+			 </combo_item>
+			 <combo_item name="MaleUpperBody">
+					Cuerpo Superior Masculino
+			 </combo_item>
+			 <combo_item name="MaleLowerBody">
+					Cuerpo Inferior Masculino
+			 </combo_item>
+			 <combo_item name="Skirt">
+					Falda
+			 </combo_item>
+			 <combo_item name="SculptedPrim">
+					Prim Sculpt
+			 </combo_item>
+	  </combo_box>
+	  <text name="bad_image_text">
+			 No se puede leer la imagen.
 
-Try saving image as 24 bit Targa (.tga).
-	</text>
-	<check_box bottom="37" control_name="LosslessJ2CUpload" enabled="false"
-	     follows="bottom|left" font="SansSerifSmall" height="16"
-	     initial_value="false" label="Use lossless compression" left="10"
-	     left_delta="2" name="lossless_check" width="280" />
-	<check_box bottom="37" control_name="TemporaryUpload" enabled="true"
-             follows="bottom|left" font="SansSerifSmall" height="16"
-             initial_value="false" label="Temporary (Free)"
-             left_delta="155" name="temp_check" width="280" tooltip="Sets the asset to be temporary, meaning its free, but in return, only good for a short time before it ceases to exist." />
-	<button bottom="10" follows="bottom|right" height="20" label="Cancel" left="165"
-	     name="cancel_btn" width="125" />
-	<button bottom="10" follows="bottom|left" height="20" label="Upload ([UPLOADFEE])"
-	     left="15" name="ok_btn" width="125" />
+Intenta guardándola como Targa de 24 bits (.tga).
+	  </text>
+	  <check_box label="Usar Compresión sin pérdid" name="lossless_check"/>
+	  <check_box label="Temporaria (Gratis)" name="temp_check" tooltip="Fija el item como temporario, lo cual significa que es gratis pero por un período de tiempo luego del cual, desaparece"/>
+	  <button label="Cancelar" name="cancel_btn"/>
+	  <button label="Subir ([UPLOADFEE])" name="ok_btn"/>
 </floater>
