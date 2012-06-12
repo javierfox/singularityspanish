@@ -59,10 +59,10 @@
 					<text name="WL12amHash2">
 						  |
 					</text>
-					<button label="Añadir un Punto" label_selected="Añadir un Punto" name="WLAddKey"/>
-					<button label="Quitar un Punto" label_selected="Quitar un Punto" name="WLDeleteKey"/>
-					<text name="WLCurKeyFrameText">
-						  Configuración de fotograma clave:
+					<button label="Añadir Punto" label_selected="Añadir Punto" name="WLAddKey"/>
+					<button label="Quitar Punto" label_selected="Quitar Punto" name="WLDeleteKey"/>
+					<text name="WLCurKeyFrameText" width="200">
+						  Configuración fotográma clave:
 					</text>
 					<text name="WLCurKeyTimeText">
 						  Hora Clave:
