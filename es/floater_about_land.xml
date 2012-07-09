@@ -6,11 +6,9 @@
 					<text name="Name:">
 						  Nombre:
 					</text>
-					<line_editor name="Name"/>
 					<text name="Description:">
 						  Descripción:
 					</text>
-					<text_editor name="Description"/>
 					<text name="LandType">
 						  Tipo:
 					</text>
@@ -48,7 +46,6 @@
 					<text name="Group:">
 						  Grupo:
 					</text>
-					<text name="GroupText"/>
 					<button label="Definir..." label_selected="Definir..." name="Set..."/>
 					<button bottom="-160"  label="Info" name="group_profile"/>
 					<check_box label="Permitir transferir al grupo" name="check deed" tool_tip="Un oficial del grupo puede transferir este terreno al grupo. El terreno será sostenido por el grupo en sus asignaciones de terreno."/>

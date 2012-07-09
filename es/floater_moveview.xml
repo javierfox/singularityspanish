@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<floatername="move floater" title="">
+<floater name="move floater" title="">
 	  <button label="" label_selected="" name="turn left btn" tool_tip="Girar a la Izquierda" />
 	  <button label="" label_selected="" name="turn right btn" tool_tip="Girar a la Derecha" />
 	  <button label="" label_selected="" name="move up btn" tool_tip="Saltar o iniciar vuelo" />

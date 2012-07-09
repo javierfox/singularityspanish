@@ -2,10 +2,9 @@
 <floater name="floater_about" title="Acerca de Singularity Viewer">
 	  <tab_container name="about_tab">
 			 <panel label="Información" help_topic="about_support_tab" name="support_panel">
-					<text_editor name="support_editor"/>
 					<button label="Copiar al portapapeles" name="copy_btn"/>
 			 </panel>
-			 <panel label="Creditos" help_topic="about_credits_tab" name="credits_panel">
+			 <panel label="Créditos" help_topic="about_credits_tab" name="credits_panel">
 					<text_editor name="credits_editor">
 Singularity Viewer es desarrollado y mantenido por Siana Gearz, Shyotl Kuhr, Aleric Inglewood and Narv Czervik, con contribuciones de Henri Beauchamp, Kitty Barnett, Thickbrick Sleaford, Zauber Parecelsus, Wolfspirit Magic y otros. Singularity está basado en el código fuente del Visor  Ascent. Los créditos del Visor Ascent incluyen a Hg Beeks, Charley Levenque, Hazim Gazov, Zwagoth Klaar, Qarl Fizz, y otros. El Visor Ascent está basado en el código fuente del visor Inertia.
 

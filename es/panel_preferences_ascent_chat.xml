@@ -1,118 +1,134 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<panel top="20" left="10" height="400" width="517" border="true" label="Adv. Chat" name="ascsys">
-  <tab_container label="Advanced Chat" bottom="0" height="440" width="497" left="0" name="Ascent Chat" tab_position="top">
+<panel label="Chat Avanzado" name="ascsys">
+	  <tab_container label="Chat Avanzado" name="Ascent Chat">
+			 <panel label="Chat/MI" name="Chat/IM">
+					<text name="objects_link_text_box">
+						  MIs:
+					</text>
+					<check_box label="Usar Pestañas de MI Verticales (Requiere reiniciar)" name="use_vertical_ims_check"/>
+					<check_box label="Anunciar Mensajes Instantáneos Entrantes" tool_tip="Abre una ventana de MI cuando alguien comienza a escribirte un MI. Esto te permite conocer cuando alguien te abre un MI antes de enviartelo." name="quickstart_im_check"/>
+					<check_box label="No enviar '[nombre] está escribiendo...'  en MIs" tool_tip="Tu contacto de MI no verá '______ está escribiendo...' cuando le respondes." name="hide_typing_check"/>
+					<check_box label="Mostrar nombre del grupo en el chat" tool_tip="El nombre del grupo también será mostrado si el MI es de un chat de grupo." name="append_group_name_check"/>
+					<!-- Left/Right Column split  
+					<view_border bevel_style="none" border_thickness="1" bottom_delta="0" follows="top|left" height="75"	left="235" name="CmdDivisor" width="0"/>
+					-->
+					<text name="objects_link_text_box2">
+						  Chat:
+					</text>
+					<check_box label="Ejecutar sonido de escritura en chat local" tool_tip="Silencia el sonido de escritura, haciendo que determinadas cosas sean mas tranquilas, como las actuaciones en vivo." name="play_typing_sound_check"/>
+					<check_box label="No Mostrar/registrar notificaciones en chat" name="hide_notifications_in_chat_check"/>
+					<check_box label="Permitir Método MU pose." tool_tip="Permite el uso de  /me y :  para enviar emotes." name="allow_mu_pose_check"/>
+					<check_box label="Cerrar Automáticamente comentarios OOC." tool_tip="Agregar automáticamente al final '))' en cualquier mensaje que comience con '((', o viseversa." name="close_ooc_check"/>
+					<text name="objects_link_text_box3">
+						  Mostrar en el historial de chat links de chat de objetos para:
+					</text>
+					<radio_group tool_tip="Habilitar link para mostrar al propietario de un objeto de chat." name="objects_link">
+						  <radio_item name="no_object">
+								 Ningún Objeto
+						  </radio_item>
+						  <radio_item name="others_objects">
+								 Objetos de Otros
+						  </radio_item>
+						  <radio_item name="anyones_objects">
+								 Objetos de Cualquiera
+						  </radio_item>
+					</radio_group>
+					<text name="time_format_text_box">
+						  Formato de Hora:
+					</text>
+					<combo_box tool_tip="Muestras las horas o bien en formato 12-23 o 12PM-11PM." name="time_format_combobox">
+						  <combo_item name="24hours">
+								 Reloj de 24-horas
+						  </combo_item>
+						  <combo_item name="12hours">
+								 Reloj de 12-horas
+						  </combo_item>
+					</combo_box>
+					<check_box label="Agregar segundos en la hora del chat/IMs" name="seconds_in_chat_and_ims_check"/>
+					<text name="date_format_text_box">
+						  Formato de Fecha:
+					</text>
+					<combo_box name="date_format_combobox">
+						  <combo_item name="year_first">
+								 YYYY-MM-DD
+						  </combo_item>
+						  <combo_item name="day_first">
+								 DD/MM/YYYY
+						  </combo_item>
+						  <combo_item name="month_first">
+								 MM/DD/YYYY
+						  </combo_item>
+					</combo_box>
+					<!-- Auto-responder -->
+					<check_box label="Habilitar Respuesta Automática" name="AscentInstantMessageResponseAnyone" tool_tip=" Envia un mensaje pre-grabado de tu elección cuando alguien te abre un IM. (Escribe tu mensaje en el área de texto  de la Ventana Texto de Respuesta."/>
+					<check_box label="Responder a no amigos" name="AscentInstantMessageResponseFriends" tool_tip="Envia un mensaje pre-grabado de tu elección cuando alguien te abre un IM. (Escribe tu mensaje en el área de texto  de la Ventana Texto de Respuesta."/>
+					<check_box label="Responder a quienes tienes ignorados" name="AscentInstantMessageResponseMuted" tool_tip="Envia un mensaje pre-grabado de tu elección cuando alguien te abre un IM. (Escribe tu mensaje en el área de texto  de la Ventana Texto de Respuesta."/>
+					<check_box label="Enviar apenas comienzan a escribir" name="AscentInstantMessageShowOnTyping"/>
+					<check_box label="No mostrar MIs contestados automáticamente" name="AscentInstantMessageShowResponded"/>
+					<check_box label="Responder a todos los mensajes" name="AscentInstantMessageResponseRepeat"/>
+					<check_box label="Enviar un item junto con la respuesta" name="AscentInstantMessageResponseItem" tool_tip="Puedes incluir un item de tu inventario para enviar junto con tu respuesta automática, arrástrandolo desde tu inventario al cuadro inferior"/>
+					<text name="text_box1">
+						  Texto de Respuesta:
+					</text>
+					<text name="text_box2">
+#f nombre de usuario, #l apellido del usuario,
+#t para fecha y hora, #r para tu SLURL,
+#i tu tiempo inactivo. (p.e. "5 mins")
+					</text>
+			 </panel>
 
-    <panel border="true" left="1" bottom="-408" height="408" width="500" label="Chat/IM" name="Chat/IM">
-      <text bottom="-15" left="15" name="objects_link_text_box">IMs:</text>
-      <check_box bottom_delta="-25" left="10" follows="top" initial_value="false" control_name="WoLfVerticalIMTabs" 
-        label="Use Vertical IMs (Requires a restart)" name="use_vertical_ims_check"/>
-      <check_box bottom_delta="-20" follows="left|top" initial_value="false" control_name="AscentInstantMessageAnnounceIncoming"
-        label="Announce incoming instant messages" tool_tip="Opens an IM window when someone starts typing an IM to you. This gives you a heads up that someone is IMing you before they hit enter." name="quickstart_im_check"/>
-      <check_box bottom_delta="-20" follows="left|top" control_name="AscentHideTypingNotification" initial_value="false"
-        label="Don't send '[name] is typing...' in IMs" tool_tip="IM partners will not see '______ is typing...' when you're responding." name="hide_typing_check"/>
-      <check_box bottom_delta="-20" follows="left|top" control_name="OptionShowGroupNameInChatIM" initial_value="false"
-        label="Show group name in chat" tool_tip="The name of the group will also be displayed if the IM is from group chat." name="append_group_name_check"/>
-	  <!-- Left/Right Column split  
-		 <view_border bevel_style="none" border_thickness="1" bottom_delta="0" follows="top|left" height="75"
-		left="235" name="CmdDivisor" width="0"/>
-	  -->
-      <text bottom="-15" left="250" name="objects_link_text_box2" width="300">Chat:</text>
-      <check_box bottom_delta="-25" left_delta="-5" follows="left|top" control_name="PlayTypingSound" initial_value="true"
-        label="Play the typing sound for local chat" tool_tip="Silences the chatting type sound, making it quieter for things like performances." name="play_typing_sound_check"/>
-      <check_box bottom_delta="-20" follows="left|top" control_name="HideNotificationsInChat" initial_value="false"
-        label="Do not echo/log notifications in chat" name="hide_notifications_in_chat_check"/>
-      <check_box bottom="-120" left="10" control_name="AscentAllowMUpose" initial_value="false"
-        label="Allow MU pose method." tool_tip="Allows the use of both /me and : to perform emotes." name="allow_mu_pose_check"/>
-      <check_box bottom_delta="-20" follows="left|top" control_name="AscentAutoCloseOOC"
-        label="Auto-close OOC comments." tool_tip="Will automatically append '))' to any message starting with '((', or visa versa." name="close_ooc_check"/>
-      <text bottom_delta="-15" follows="left|top" name="objects_link_text_box3">Show links on chatting object names in chat history for:</text>
-      <radio_group bottom_delta="-26" control_name="LinksForChattingObjects" tool_tip="Enables a link to show you the owner of the speaking object."
-        follows="top" height="20" left="20" name="objects_link" width="350">
-        <radio_item bottom_delta="0" left_delta="5" name="no_object" width="48">No object</radio_item>
-        <radio_item bottom_delta="0" left_delta="45" name="others_objects" width="48">Others' objects</radio_item>
-        <radio_item bottom_delta="0" left_delta="60" name="anyones_objects" width="48">Anyone's objects</radio_item>
-      </radio_group>
-      <text bottom_delta="-18" left="10" follows="top" name="time_format_text_box">Time format:</text>
-      <combo_box bottom_delta="-5" left="90" follows="top" height="18" tool_tip="Show hours in either 12-23 or 12PM-11PM format." name="time_format_combobox" width="130">
-        <combo_item name="24hours" value="default">24-hour clock</combo_item>
-        <combo_item name="12hours" value="default">12-hour clock</combo_item>
-      </combo_box>
-      <check_box bottom_delta="0" left="240" follows="top" control_name="SecondsInChatAndIMs" initial_value="false" label="Seconds in chat/IMs timestamps" name="seconds_in_chat_and_ims_check"/>
-      <text bottom_delta="-18" left="10" follows="top" name="date_format_text_box">Date format:</text>
-      <combo_box bottom_delta="-5" left="90" follows="top" height="18" name="date_format_combobox" width="130">
-        <combo_item name="year_first" value="default">YYYY-MM-DD</combo_item>
-        <combo_item name="day_first" value="default">DD/MM/YYYY</combo_item>
-        <combo_item name="month_first" value="default">MM/DD/YYYY</combo_item>
-      </combo_box>
-      <!-- Auto-responder -->
-      <view_border bottom="-420" left="5" height="190" bevel_style="none" border_thickness="1" name="GraphicsBorder" width="485"/>
-      <check_box bottom_delta="168" left="10" follows="top" initial_value="false" label="Enable Autoresponse"
-        name="AscentInstantMessageResponseAnyone" tool_tip="Sends a pre made message of your choosing, when people start IMing you. (Enter your message in the Response Text. Text area), located below."/>
-	  <check_box bottom_delta="-20" follows="left|top" initial_value="false"
-		label="Autorespond to non-friends" name="AscentInstantMessageResponseFriends" tool_tip="Sends a pre made message of your choosing, when people start IMing you. (Enter your message in the Response Text. Text area), located below."/>
-	  <check_box bottom_delta="-20" follows="left|top" initial_value="false" 
-		label="Autorespond to people you have muted" name="AscentInstantMessageResponseMuted" tool_tip="Sends a pre made message of your choosing, when people start IMing you. (Enter your message in the Response Text. Text area), located below."/>
-      <check_box bottom_delta="-20" follows="left|top" initial_value="false" label="Send as soon as they start typing" name="AscentInstantMessageShowOnTyping"/>
-      <check_box bottom_delta="-20" follows="left|top" initial_value="false" label="Don't show IMs you auto-responsed to" name="AscentInstantMessageShowResponded"/>
-      <check_box bottom_delta="-20" follows="left|top" initial_value="false" label="Autorespond to every message" name="AscentInstantMessageResponseRepeat"/>
-      <check_box bottom_delta="-20" follows="left|top" initial_value="false" label="Send an item along with the response" name="AscentInstantMessageResponseItem" tool_tip="You can include an inventory item to send along with your auto response by dragging it from your inventory to the location below"/>
-	  <text bottom_delta="120" left_delta="245" follows="left|top" height="18" name="text_box1">Response Text:</text>
-      <text_editor bottom_delta="-110" follows="left|top" height="110" max_length="1100" name="im_response" width="230" word_wrap="true" spell_check="true"/>
-      <text bottom_delta="-25" follows="left|top" height="18" name="text_box2">
-#f for user's first name, #l for last name,
-#t for timestamp, #r for SLURL to you,
-#i for your idle time. (e.g. "5 mins")
-      </text>
-    </panel>
+			 <panel label="Spam" name="Spam">
+					<check_box label="Habilitar bloqueo de spam en chat" tool_tip="Habilita el bloqueo automático de spam en el chat" name="AscChatSpamBlock" control_name="SGBlockChatSpam"/>
+					<spinner label="Mensajes" tool_tip="Número de items de spam por tiempo. (Por Defecto: 10)" name="AscChatSpamCount"/>
+					<spinner label="Tiempo" name="AscChatSpamTime" tool_tip="Tiempo para evaluar el spam, en segundos. (Por defecto: 1.0)"/>
+					<text name="">
+						  segundos
+					</text>
+					<check_box label="Habilitar bloqueo de spam en Diálogos" tool_tip="Habilita el bloqueo automático del spam en ventanas de diálogo" name="AscDialogSpamBlock"/>
+					<check_box label="Habilitar bloqueo de Spam en Tarjetas de Llamada" tool_tip="Habilita el bloqueo automático del spam en Tarjetas de Llamada" name="AscCardSpamBlock"/>
+					<spinner label="Cantidad" name="AscSpamCount" tool_tip="Esta configuración se aplica tanto al Spam en ventanas de Diálogo como en Tarjetas de Llamada (Por Defecto: 4)"/>
+					<spinner label="Tiempo" name="AscSpamTime" tool_tip="Esta configuración se aplica tanto al Spam en ventanas de Diálogo como en Tarjetas de Llamada (Por Defecto: 1.0)"/>
+					<text name="">
+						  segundos
+					</text>
+			 </panel>
 
-    <panel border="true" left="1" bottom="-408" height="408" width="500" label="Spam" name="Spam">
-      <check_box left="10" bottom_delta="-25" follows="top" font="SansSerifSmall"
-        label="Enable chat spam blocking" tool_tip="Enable automatic chat spam blocking" name="AscChatSpamBlock" control_name="SGBlockChatSpam"/>
-      <spinner left_delta="20" height="18" width="120" follows="top" decimal_digits="0" increment="1" initial_val="10" min_val="2" max_val="100"
-        label="Chat count" label_width="70" tool_tip="Number of items spammed per time set. (Default: 10)" name="AscChatSpamCount" control_name="SGChatSpamCount"/>
-      <spinner height="18" width="120" follows="left|top" decimal_digits="1" increment="1" initial_val="1.0" min_val="1" max_val="60"
-        label="Chat time" label_width="70" name="AscChatSpamTime" control_name="SGChatSpamTime" tool_tip="Time of evalulating spam in seconds. (Default: 1.0)"/>
-      <text bottom_delta="0" left_delta="130" height="16" follows="top" name="" width="100">seconds</text>
-      <check_box left_delta="-150" height="16" follows="top" label="Enable dialog spam blocking" tool_tip="Enable automatic dialog spam blocking" name="AscDialogSpamBlock" control_name="SGBlockDialogSpam"/>
-      <check_box height="16" follows="left|top" label="Enable calling card spam blocking" tool_tip="Enable automatic calling card spam blocking" name="AscCardSpamBlock" control_name="SGBlockCardSpam"/>
-      <spinner left_delta="20" height="18" width="120" follows="top" decimal_digits="0" increment="1" initial_val="4" min_val="2" max_val="100"
-        label="Spam count" label_width="70" name="AscSpamCount" control_name="SGSpamCount" tool_tip="This setting applies to both Dialog and Card spam (Default: 4)"/>
-      <spinner height="18" width="120" follows="left|top" decimal_digits="1" increment="1" initial_val="1.0" min_val="1" max_val="60"
-        label="Spam time" label_width="70" name="AscSpamTime" control_name="SGSpamTime" tool_tip="This setting applies to both Dialog and Card spam (Default: 1.0)"/>
-      <text bottom_delta="0" left_delta="130" height="16" follows="top" name="">seconds</text>
-    </panel>
+			 <panel label="Opciones de Texto" name="TextOptions">
+					<check_box label="Mostrar en rojo palabras mal escritas" name="SpellDisplay"/>
+					<text name="EmSpell_txt1">
+						  Idioma actual (dicxionario):
+					</text>
+					<combo_box name="SpellBase"/>
+					<text name="EmSpell_txt3">
+						  Idiomas descagarados (diccionarios):
+					</text>
+					<combo_box name="EmSpell_Avail"/>
+					<button label="Instalar" name="EmSpell_Add" tool_tip=""/>
+					<button label="Descargar Más..." name="EmSpell_GetMore" tool_tip="Obtener más diccionarios disponibles en línea"/>
+					<text name="EmSpell_txt2">
+						  Idiomas Personalizados Adicionales (diccionarios):
+					</text>
+					<combo_box name="EmSpell_Installed" tool_tip=""/>
+					<button label="Quitar" name="EmSpell_Remove" tool_tip=""/>
+					<button label="Editar Diccionario Personalizado" name="EmSpell_EditCustom"/>
+					<text name="EmSpell_txt4">
+Para usar el corrector ortográfico, botón derecho sobre la palabra
+errónea (en rojo u otro color) y selecciona reemplazarla
+					</text>
 
-    <panel border="true" bottom="-580" height="525" label="Text Options" left="1" name="TextOptions" width="418">
-      <check_box bottom="-25" left="12" height="16" label="Show misspelled words in red" name="SpellDisplay" control_name="SpellDisplay"/>
-      <text bottom_delta="-24" follows="left|top" height="16" name="EmSpell_txt1">Current language (dictionary):</text>
-      <combo_box bottom_delta="-20" follows="left|top" height="20" name="SpellBase" width="250" control_name="SpellBase"/>
-      <text bottom_delta="-24" follows="left|top" height="20" name="EmSpell_txt3">Downloaded languages (dictionaries):</text>
-      <combo_box bottom_delta="-20" follows="left|top" height="20" name="EmSpell_Avail" width="250" control_name="EmSpell_Avail"/>
-      <button bottom_delta="0" left_delta="255" follows="left|top" height="20" label="Install" name="EmSpell_Add" tool_tip="" width="80"/>
-      <button bottom_delta="-22" left="12" follows="top" height="20" label="Download More..." name="EmSpell_GetMore" tool_tip="Get more dictionaries availabe online" width="250"/>
-      <text bottom_delta="-24" follows="left|top" height="20" name="EmSpell_txt2">Additional custom languages (dictionaries):</text>
-      <combo_box bottom_delta="-20" follows="left|top" height="20" name="EmSpell_Installed" width="250" control_name="EmSpell_Installed" tool_tip=""/>
-      <button bottom_delta="0" left_delta="255" follows="left|top" height="20" label="Remove" name="EmSpell_Remove" tool_tip="" width="80"/>
-      <button bottom_delta="-20" left="12" follows="top" height="20" label="Edit Custom dictionary" name="EmSpell_EditCustom" width="250"/>
-      <text bottom_delta="-24" follows="left|top" height="20" name="EmSpell_txt4">
-To use spellcheck, right-click a misspelled word
-(red or otherwise) and select its replacement
-      </text>
+					<check_box label="Resaltar Mensajes que contengan los términos" name="KeywordsOn"/>
+					<text name="keyword_txt1">
+						  (separados por comas)
+					</text>
+					<text name="EmKeyw">
+						  Se encuentre en:
+					</text>
+					<check_box label="Flotante de Chat Local" name="KeywordsInChat"/>
+					<check_box label="Flotante de Mensajes Instantáneos" name="KeywordsInIM"/>
+					<check_box label="Resaltar el Mensaje en este color:" name="KeywordsChangeColor"/>
+					<color_swatch name="KeywordsColor" tool_tip="Pulsa para abrir el selector de Colores"/>
+					<check_box label="Ejecutar este sonido de alerta: (UUID)" name="KeywordsPlaySound"/>
+			 </panel>
 
-      <view_border bevel_style="none" border_thickness="1" bottom_delta="-16" follows="top" height="0" left="5" name="CmdDivisor" width="356"/>
-
-      <check_box bottom_delta="-24" follows="left|top" font="SansSerifSmall" height="16"
-        label="Highlight messages if any of them contain the terms" name="KeywordsOn" width="270"/>
-      <text bottom_delta="-20" follows="top" height="20" left="12" name="keyword_txt1">(separated by commas)</text>
-      <line_editor bevel_style="in" border_style="line" border_thickness="1" bottom_delta="-20" follows="top" height="20" left_delta="5" max_length="500" name="KeywordsList" width="300"/>
-      <text bottom_delta="-24" follows="top" height="20" left_delta="15" name="EmKeyw">Is found within:</text>
-      <check_box bottom_delta="3" follows="top" height="16" left_delta="100" label="Local Chat Floater" name="KeywordsInChat"/>
-      <check_box bottom_delta="-15" follows="left|top" height="16" label="Instant Message Floater" name="KeywordsInIM"/>
-      <check_box bottom_delta="-24" follows="top" height="16" label="Highlight the message in this color:" left_delta="-110" name="KeywordsChangeColor"/>
-      <color_swatch border_color="0.45098, 0.517647, 0.607843, 1" bottom_delta="-16" can_apply_immediately="true" color="1, 1, 1, 1" follows="left|top" height="35" left_delta="210" name="KeywordsColor" tool_tip="Click to open Color Picker" width="50"/>
-      <check_box bottom_delta="-10" follows="top" height="16" left_delta="-210" label="Play this sound alert: (UUID)" name="KeywordsPlaySound"/>
-      <line_editor bottom_delta="-20" follows="left|top" bevel_style="in" border_style="line" border_thickness="1" height="20" left_delta="-5" max_length="36" name="KeywordsSound" width="300"/>
-    </panel>
-
-  </tab_container>
+	  </tab_container>
 </panel>

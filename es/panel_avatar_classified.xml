@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <panel name="Classified" title="Clasificados">
-	  <line_editor name="given_name_editor" tool_tip="El nombre debe comenzar con letras o números, no signos de puntuación" />
+	  <line_editor name="given_name_editor" tool_tip="El nombre debe comenzar con letras o números, sin signos de puntuación" />
 	  <line_editor name="location_editor" tool_tip="Fija la ubicación para este clasificado en tu actual posición."/>
 	  <button label="Fijar Ubicación" name="set_location_btn"/>
 	  <button label="Teleportar" name="classified_teleport_btn"/>

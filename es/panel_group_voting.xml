@@ -1,43 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<panel border="true" bottom="0" follows="all" height="466" label="Proposals" left="1"
-     mouse_opaque="true" name="voting_tab" width="418">
-	<string name="help_text">
-		Group Proposals can be used to get a feel
-for what the group wants to do, or how the
-group feels about something. If you have 
-the proper powers, you can create proposals,
-vote on open proposals, and view old proposals.
-	</string>
-	<panel background_opaque="true" background_visible="true" bevel_style="in"
-	     bg_alpha_color="blue" border="true"
-	     bottom_delta="-225" follows="left|top" height="170" left="7"
-	     mouse_opaque="false" name="open_proposals_container" width="404" />
-	<panel background_opaque="true" background_visible="true" bevel_style="in"
-	     bg_alpha_color="blue" border="true" bottom="7"
-	     follows="left|top" height="175" left="7" mouse_opaque="false"
-	     name="voting_history_container" width="404" />
-	<button bottom="-24" font="SansSerif" halign="center" height="16" label="?" left="391"
-	     name="help_button" width="20" />
-	<text bg_visible="false" border_drop_shadow_visible="false" border_visible="false"
-	     bottom="446" drop_shadow_visible="true" follows="left|top"
-	     font="SansSerifBig" h_pad="0" halign="left" height="16" left="7"
-	     mouse_opaque="false" name="proposal_header" v_pad="0" width="363">
-		Open Group Proposals
-	</text>
-	<text bg_visible="false" border_drop_shadow_visible="false" border_visible="false"
-	     bottom_delta="-36" drop_shadow_visible="true" follows="left|top"
-	     font="SansSerifSmall" h_pad="0" halign="left" height="32" left="7"
-	     mouse_opaque="false" name="proposal_instructions" v_pad="0" width="380">
-		Double click on the proposal you would like to vote on or press Create Proposal to create a new proposal
-	</text>
-	<text bg_visible="false" border_drop_shadow_visible="false" border_visible="false"
-	     bottom_delta="-16" drop_shadow_visible="true" follows="left|top"
-	     font="SansSerifSmall" h_pad="0" halign="left" height="16" left="10"
-	     mouse_opaque="false" name="proposal_lbl" v_pad="0" visible="true"
-	     width="396">
-		Proposal Description
-	</text>
-	<text bg_visible="false" border_drop_shadow_visible="false" border_visible="false"
+<panel label="Propuestas" name="voting_tab">
+	  <string name="help_text">
+			 Las propuestas de grupo pueden utilizarse para saber 
+qué  quiere hacer un grupo, o cómo piensa acerca de algo. 
+Si tienes los permisos necesarios, puedesr crear propuestas, 
+votar en las que estén abiertas, y ver las antiguas.	  
+	  </string>
+	  <panel name="open_proposals_container"/>
+	  <panel name="voting_history_container"/>
+			 <button label="?" name="help_button"/>
+			 <text name="proposal_header">
+					Abrir las Propuestas de Grupo
+			 </text>
+			 <text name="proposal_instructions">
+					Pulsa dos veces la propuesta en la que quieres votar, o pulsa
+Hacer una propuesta para crear una nueva.
+			 </text>
+			 <text name="proposal_lbl">
+					Descripción de la Propuesta
+			 </text>
+			 <text bg_visible="false" border_drop_shadow_visible="false" border_visible="false"
 	     bottom_delta="0" drop_shadow_visible="true" follows="left|top"
 	     font="SansSerifSmall" h_pad="0" halign="left" height="16" left="10"
 	     mouse_opaque="false" name="proposal_voting_lbl" v_pad="0" visible="true"

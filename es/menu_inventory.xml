@@ -36,7 +36,7 @@
 	  <menu_item_call name="New Gesture" label="Gesto nuevo" >
 			 <on_click filter="" function="Inventory.DoCreate" userdata="gesture" />
 	  </menu_item_call>
-	  <menu name="New Clothes" >
+	  <menu name="New Clothes" label="Nuevas Ropas">
 		<menu_item_call name="New Shirt" label=" Camisa nueva" >
 			<on_click filter="" function="Inventory.DoCreate" userdata="shirt" />
 		</menu_item_call>
