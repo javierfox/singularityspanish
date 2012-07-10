@@ -1,102 +1,189 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<panel border="true" bottom="-439" height="438" label="Graphics" left="102" name="Display panel" width="517">
-	<button bottom="-22" height="18" label="?" left="470" name="GraphicsPreferencesHelpButton" width="22"/>
-	<check_box bottom="-23" height="16" initial_value="false" label="Run viewer in a window" left="10" name="windowed mode" width="120" tool_tip="If unchecked, viewer will display full-screen when logged in."/>
-	<text bottom="-62" height="12" name="WindowSizeLabel">Window Size:</text>
-	<combo_box bottom="-67" height="18" left="165" name="windowsize combo" width="150">
-		<combo_item name="800x600" value="800 x 600">800x600</combo_item>
-		<combo_item name="720x480" value="720 x 480">720x480 (NTSC)</combo_item>
-		<combo_item name="768x576" value="768 x 576">768x576 (PAL)</combo_item>
-		<combo_item name="1024x768" value="1024 x 768">1024x768</combo_item>
-		<combo_item name="1280x720" value="1280 x 720">1280x720 (HDV720)</combo_item>
-		<combo_item name="1440x1080" value="1440 x 1080">1440x1080 (HDV1080)</combo_item>
-		<combo_item name="1920x1080" value="1920 x 1080">1920x1080 (HD1080)</combo_item>
-	</combo_box>
-	<text bottom="-62" height="12" left="10" name="DisplayResLabel">Display Resolution:</text>
-	<combo_box bottom="-67"	height="18" left="165" name="fullscreen combo" width="150"/>
-	<text bottom="-39" height="12" left="10" name="AspectRatioLabel1">Aspect Ratio:</text>
-	<combo_box bottom="-43"	height="16" left="165" name="aspect_ratio" width="150" tool_tip="width / height">
-		<combo_item name="4:3(StandardCRT)" value="1.333333">4:3 (Standard CRT)</combo_item>
-		<combo_item name="5:4(1280x1024LCD)" value="1.25">5:4 (1280x1024 LCD)</combo_item>
-		<combo_item name="8:5(Widescreen)" value="1.6">16:10 (Widescreen PC)</combo_item>
-		<combo_item name="16:9(Widescreen)" value="1.7777777">16:9 (Widescreen TV)</combo_item>
-	</combo_box>
-	<check_box bottom="-44" control_name="FullScreenAutoDetectAspectRatio" height="16" initial_value="false" label="Auto-detect ratio" left="358" name="aspect_auto_detect" width="256"/>
-	<text bottom="-91"  height="12" left="10" name="QualityText">Quality &amp; Performance:</text>
-	<text bottom="-91"  height="12" left="135" name="FasterText">Faster</text>
-	<text bottom="-107" height="12" left_delta="23" name="ShadersPrefText">Low</text>
-	<text bottom="-107" height="12" left_delta="47" name="ShadersPrefText2">Mid</text>
-	<text bottom="-107" height="12" left_delta="47" name="ShadersPrefText3">High</text>
-	<text bottom="-107" height="12" left_delta="47" name="ShadersPrefText4">Ultra</text>
-	<text bottom="-91"  height="12"	left_delta="14" name="QualityText2">Higher Quality</text>
-<!-- Are these icons really necessary? 
+<panel label="Gráficos" name="Display panel">
+	  <button label="?" name="GraphicsPreferencesHelpButton"/>
+	  <check_box label="Ejecutar el Visor en Ventana" name="windowed mode" tool_tip="Si setá desmarcado, el visor se ejecutará a pantalla completa cuando inicies sesión."/>
+	  <text name="WindowSizeLabel">
+			 Tamaño de Ventana:
+	  </text>
+	  <combo_box name="windowsize combo">
+			 <combo_item name="800x600">
+					800x600
+			 </combo_item>
+			 <combo_item name="720x480">
+					720x480 (NTSC)
+			 </combo_item>
+			 <combo_item name="768x576">
+					768x576 (PAL)
+			 </combo_item>
+			 <combo_item name="1024x768">
+					1024x768
+			 </combo_item>
+			 <combo_item name="1280x720">
+					1280x720 (HDV720)
+			 </combo_item>
+			 <combo_item name="1440x1080">
+					1440x1080 (HDV1080)
+			 </combo_item>
+			 <combo_item name="1920x1080">
+					1920x1080 (HD1080)
+			 </combo_item>
+	  </combo_box>
+	  <text name="DisplayResLabel">
+			 Resolución de Pantalla:
+	  </text>
+	  <combo_box name="fullscreen combo" left="130" />
+	  <text name="AspectRatioLabel1">
+			 Proporción:
+	  </text>
+	  <combo_box name="aspect_ratio" tool_tip="Ancho / Alto" left="130" >
+			 <combo_item name="4:3(StandardCRT)">
+					4:3 (CRT Estándar)
+			 </combo_item>
+			 <combo_item name="5:4(1280x1024LCD)">
+					5:4 (1280x1024 LCD)
+			 </combo_item>
+			 <combo_item name="8:5(Widescreen)">
+					16:10 (PC Pantalla ancha)
+			 </combo_item>
+			 <combo_item name="16:9(Widescreen)">
+					16:9 (TV Pantalla ancha)
+			 </combo_item>
+	  </combo_box>
+	  <check_box label="Detectar proporción automáticamente" name="aspect_auto_detect" left="280"/>
+	  <text name="QualityText">
+			 Calidad y Rendimiento:
+	  </text>
+	  <text name="FasterText"  left="130">
+			 Rápido
+	  </text>
+	  <text name="ShadersPrefText">
+			 Bajo
+	  </text>
+	  <text name="ShadersPrefText2">
+			 Medio
+	  </text>
+	  <text name="ShadersPrefText3">
+			 Alto
+	  </text>
+	  <text name="ShadersPrefText4">
+			 Ultra
+	  </text>
+	  <text name="QualityText2">
+			 Alta Calidad
+	  </text>
+	  <!-- Are these icons really necessary? 
 	<icon bottom="-89" height="14" image_name="rounded_square.tga" left="173" name="LowDivet" width="2"/>
 	<icon bottom="-89" height="14" image_name="rounded_square.tga" left_delta="44" name="MidDivet" width="2"/>
 	<icon bottom="-89" height="14" image_name="rounded_square.tga" left_delta="44" name="HighDivet" width="2"/>
 	<icon bottom="-89" height="14" image_name="rounded_square.tga" left_delta="44" name="UltraDivet" width="2"/>
 -->
-	<slider bottom="-91" control_name="RenderQualityPerformance" increment="1" initial_val="0" left="165" max_val="3" min_val="0" name="QualityPerformanceSelection" show_text="false" width="150" />
-	<check_box bottom="-96" control_name="RenderCustomSettings" label="Custom" left="395" initial_value="true" name="CustomSettings"/>
-	<view_border bevel_style="none" bottom="-395" height="280" left="5" name="GraphicsBorder" width="485"/>
-	<text bottom="-130" height="12" left="10" name="ShadersText">Shaders:</text>
-	<check_box bottom_delta="-23" control_name="RenderObjectBump" height="16" initial_value="true" label="Bump Mapping and Shiny" left="10" name="BumpShiny"/>
-	<check_box bottom_delta="-17" control_name="VertexShaderEnable" height="16" initial_value="true" label="Basic Shaders" left_delta="0" name="BasicShaders" tool_tip="Disabling this option may prevent some graphics card drivers from crashing."/>
-	<check_box bottom_delta="-17" control_name="WindLightUseAtmosShaders" initial_value="true" label="Atmospheric Shaders" left_delta="0" name="WindLightUseAtmosShaders"/>
-	<check_box bottom_delta="-17" control_name="RenderDeferred" initial_value="true" label="Deferred Shading" left_delta="0" name="RenderDeferred"/>
-	<check_box bottom_delta="-17" control_name="RenderDepthOfField"	initial_value="true" label="Depth of Field" left_delta="0" name="RenderDepthOfField"/>
-	<text bottom_delta="-17" height="12" left="15" name="ReflectionDetailText">Water Reflections:</text>
-	<combo_box bottom_delta="-20" control_name="RenderReflectionDetail" label="Reflection Detail" left_delta="-2" name="ReflectionDetailCombo" width="160" height="16">
-		<combo_item name="0" value="0">Disabled</combo_item>
-		<combo_item name="1" value="1">Terrain and Trees</combo_item>
-		<combo_item name="2" value="2">All Static Objects</combo_item>
-		<combo_item name="3" value="3">All Avatars and Objects</combo_item>
-		<combo_item name="4" value="4">Everything</combo_item>
-	</combo_box>
-  <text bottom_delta="-17" height="12" left="15" name="ShadowDetailText">Deferred Shadows:</text>
-  <combo_box bottom_delta="-20" control_name="RenderShadowDetail" label="Shadow Detail" left_delta="-2" name="ShadowDetailCombo" width="160" height="16">
-	  <combo_item name="0" value="0">Disabled</combo_item>
-	  <combo_item name="1" value="1">Sun shadows</combo_item>
-	  <combo_item name="2" value="2">Sun and spotlight shadows</combo_item>
-  </combo_box>
-
-  <text bottom="-317" height="12" left="10" name="AvatarRenderingText">Avatar Rendering:</text>
-  <check_box bottom_delta="-18" control_name="RenderUseImpostors" initial_value="true" label="Avatar Impostors" name="AvatarImpostors"/>
-  <slider bottom_delta="-12" left_delta="8" control_name="RenderAvatarMaxVisible" 	  	 decimal_digits="0" increment="1" initial_val="35" label="Max non-impostors" label_width="100" max_val="50" min_val="1" name="AvatarMaxVisible" width="195"/>
-  <check_box bottom_delta="-22" left_delta="-8" control_name="RenderAvatarVP" initial_value="true" label="Hardware Skinning" name="AvatarVertexProgram"/>
-  <check_box bottom_delta="-17" control_name="RenderAvatarCloth" initial_value="true" label="Avatar Cloth" name="AvatarCloth"/>
-  <!--text bottom="-131" height="12" left="464" name="DrawDistanceMeterText1">m</text-->
-  <text bottom="-131" height="12" left="470" name="DrawDistanceMeterText2">m</text>
-  <slider bottom="-135"      control_name="RenderFarClip"	  	  		  decimal_digits="0" height="16" increment="8" initial_val="160" label="Draw Distance:" label_width="101" left="215" max_val="1024" min_val="64" name="DrawDistance" width="262"/>
-  <slider bottom_delta="-16" control_name="RenderMaxPartCount"	  		  decimal_digits="0" height="16" increment="256" initial_val="4096"	  label="Max. Particle Count:" label_width="101"	  max_val="8192" min_val="0" name="MaxParticleCount" width="262"/>
-  <slider bottom_delta="-20" control_name="RenderGlowResolutionPow" 	  decimal_digits="0" height="16" increment="1" initial_val="8" label="Post Process Quality:"	  label_width="101" max_val="9" min_val="8" name="RenderPostProcess" show_text="false" width="226"/>
-  <text bottom_delta="-17" height="12" left="215" name="MeshDetailText">Mesh Detail:</text>
-  <slider bottom_delta="-18" control_name="RenderVolumeLODFactor" increment="0.09375" label="  Objects:" label_width="79" max_val="2" min_val="0.5" name="ObjectMeshDetail" show_text="false" width="223"/>
-  <slider bottom_delta="-20" control_name="RenderFlexTimeFactor" increment="0.1" label="  Flexiprims:" label_width="79" max_val="1" min_val="0" name="FlexibleMeshDetail" show_text="false" width="223"/>
-  <slider bottom_delta="-20" control_name="RenderTreeLODFactor"	increment="0.125" label="  Trees:" label_width="79" max_val="1" min_val="0" name="TreeMeshDetail" show_text="false" width="223"/>
-  <slider bottom_delta="-20" control_name="RenderAvatarLODFactor" increment="0.125" label="  Avatars:" label_width="79" max_val="1" min_val="0" name="AvatarMeshDetail" show_text="false" width="223"/>
-  <slider bottom_delta="-20" control_name="RenderAvatarPhysicsLODFactor" increment="0.1" label="  Avatar Physics:" label_width="79" max_val="1" min_val="0" name="AvatarPhysicsDetail" show_text="false" width="223"/>
-  <slider bottom_delta="-20" control_name="RenderTerrainLODFactor" increment="0.125" label="  Terrain:" label_width="79" max_val="2" min_val="1" name="TerrainMeshDetail" show_text="false" width="223"/>
-  <slider bottom_delta="-20" control_name="WLSkyDetail"			  		  decimal_digits="0" increment="8" label="  Sky:" label_width="79" max_val="128" min_val="16" name="SkyMeshDetail"   show_text="false" width="223"/>
-  <text bottom="-172" height="12" left="444" name="PostProcessText">Low</text>
-  <text bottom_delta="-38" height="12" name="ObjectMeshDetailText">Low</text>
-  <text bottom_delta="-20" height="12" name="FlexibleMeshDetailText">Low</text>
-  <text bottom_delta="-20" height="12" name="TreeMeshDetailText">Low</text>
-  <text bottom_delta="-20" height="12" name="AvatarMeshDetailText">Low</text>
-  <text bottom_delta="-20" height="12" name="AvatarPhysicsDetailText">Off</text>
-  <text bottom_delta="-20" height="12" name="TerrainMeshDetailText">Low</text>
-  <text bottom_delta="-20" height="12" name="SkyMeshDetailText">Low</text>
-  <text bottom="-354"	   height="12" left="215" name="LightingDetailText">Lighting Detail:</text>
-  <radio_group bottom_delta="-40" control_name="RenderLocalLights" draw_border="false" height="38" name="LightingDetailRadio" width="321">
-	  <radio_item bottom="-15" height="16" left="3" name="SunMoon" width="156">Sun and moon only</radio_item>
-	  <radio_item bottom="-31" height="16" name="LocalLights" width="156">Nearby local lights</radio_item>
-  </radio_group>
-  <text bottom="-354" height="12" left="370" name="TerrainDetailText">Terrain Detail:</text>
-  <radio_group bottom_delta="-40" control_name="RenderTerrainDetail" draw_border="false" height="38" name="TerrainDetailRadio" width="321">
-	  <radio_item bottom="-15" height="16" left="3" name="0" width="315">Low</radio_item>
-	  <radio_item bottom="-31" height="16" name="2" width="315">High</radio_item>
-  </radio_group>
-  <button bottom="-430" height="20" label="Recommended Settings" left="130" name="Defaults" scale_image="true" width="170"/>
-  <button bottom="-430" height="20" label="Hardware Options" 	  left="310" name="GraphicsHardwareButton" scale_image="true" width="170"/>
-  <string name="resolution_format">[RES_X] x [RES_Y]</string>
-  <string name="aspect_ratio_text">[NUM]:[DEN]</string>
+	  <check_box label="Personalizar" name="CustomSettings"/>
+	  <text name="ShadersText">
+			 Sombreado:
+	  </text>
+	  <check_box label="Relieve y Brillos" name="BumpShiny"/>
+	  <check_box label="Luces Locales" name="LightingDetailRadio"/>
+	  <check_box label="Sombreado Básico" name="BasicShaders" tool_tip="Desactivar esta opción puede prevenir fallos con algunas tarjetas gráficas."/>
+	  <check_box label="Sombreado Atmosférico" name="WindLightUseAtmosShaders"/>
+	  <check_box label="Iluminación y Sombras" tool_tip="Sombreado Diferido" name="RenderDeferred"/>
+	  <check_box label="Oclusión Ambiental" name="UseSSAO"/>
+	  <check_box label="Profundidad de Campo" name="RenderDepthOfField"/>
+	  <text name="ShadowDetailText">
+			 Sombras:
+	  </text>
+	  <combo_box label="Detalle de Sombras" name="ShadowDetailCombo">
+			 <combo_item name="0">
+					Desactivado
+			 </combo_item>
+			 <combo_item name="1">
+					Sol/Luna
+			 </combo_item>
+			 <combo_item name="2">
+					Sol/Luna + Proyectores
+			 </combo_item>
+	  </combo_box>
+	  <text name="ReflectionDetailText">
+			 Reflejos en el Agua:
+	  </text>
+	  <combo_box label="Detalle de los Reflejos" name="ReflectionDetailCombo">
+			 <combo_item name="0">
+					Mínimos
+			 </combo_item>
+			 <combo_item name="1">
+					Terreno y Árboles
+			 </combo_item>
+			 <combo_item name="2">
+					Objetos Estáticos
+			 </combo_item>
+			 <combo_item name="3">
+					Avatares y Objetos
+			 </combo_item>
+			 <combo_item name="4">
+					Todo
+			 </combo_item>
+	  </combo_box>
+	  <slider label="  Física de Avatar:" name="AvatarPhysicsDetail" width="165"/>
+	  <text name="AvatarPhysicsDetailText">
+			 Apagada
+	  </text>
+	  <!--text bottom="-131" height="12" left="464" name="DrawDistanceMeterText1">m</text-->
+	  <text name="DrawDistanceMeterText2">
+			 m
+	  </text>
+	  <slider label="Distancia de Dibujo:" name="DrawDistance"/>
+	  <slider label="Máximo de Partículas:" name="MaxParticleCount"/>
+	  <slider label="Máx No Simulados" name="AvatarMaxVisible"/>
+	  <slider label="PostProcesado:" name="RenderPostProcess"/>
+	  <text name="MeshDetailText">
+			 Nivel de Detalles:
+	  </text>
+	  <slider label="  Objetos:" name="ObjectMeshDetail" />
+	  <slider label="  Prims Flexibles:" name="FlexibleMeshDetail"/>
+	  <slider label="  Árboles:" name="TreeMeshDetail"/>
+	  <slider label="  Avatares:" name="AvatarMeshDetail"/>
+	  <slider label="  Terreno:" name="TerrainMeshDetail"/>
+	  <slider label="  Cielo:" name="SkyMeshDetail"/>
+	  <text name="PostProcessText">
+			 Bajo
+	  </text>
+	  <text name="ObjectMeshDetailText">
+			 Bajo
+	  </text>
+	  <text name="FlexibleMeshDetailText">
+			 Bajo
+	  </text>
+	  <text name="TreeMeshDetailText">
+			 Bajo
+	  </text>
+	  <text name="AvatarMeshDetailText">
+			 Bajo
+	  </text>
+	  <text name="TerrainMeshDetailText">
+			 Bajo
+	  </text>
+	  <text name="SkyMeshDetailText">
+			 Bajo
+	  </text>
+	  <text name="AvatarRenderingText">
+			 Renderizado del Avatar:
+	  </text>
+	  <check_box label="Avatares Simulados" name="AvatarImpostors"/>
+	  <check_box label="Renderizado por Hardware" name="AvatarVertexProgram"/>
+	  <check_box label="Ropas de Avatar" name="AvatarCloth"/>
+	  <text name="TerrainDetailText">
+			 Detalle del Terreno:
+	  </text>
+	  <radio_group name="TerrainDetailRadio">
+			 <radio_item name="0">
+					Bajo
+			 </radio_item>
+			 <radio_item name="2">
+					Alto
+			 </radio_item>
+	  </radio_group>
+	  <button label="Reiniciar" name="Defaults"/>
+	  <!--button bottom="-440" height="20" label="Advanced" left="230" name="CustomSettingsButton" scale_image="true" width="120" toggle="true" control_name="RenderCustomSettings"/-->
+	  <button label="Hardware" name="GraphicsHardwareButton"/>
+	  <string name="resolution_format">[RES_X] x [RES_Y]</string>
+	  <string name="aspect_ratio_text">[NUM]:[DEN]</string>
 </panel>

@@ -1,38 +1,58 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<panel border="true" bottom="-499" height="548" label="Text Chat" left="102" name="chat" width="517">
-	<text bottom="-20" height="10" left="12" name="text_box">Chat Font Size:</text>
-	<radio_group bottom="-40" draw_border="true" height="30" left="148" name="chat_font_size" width="290">
-		<radio_item bottom="-24" height="16" left="0" name="radio" width="98">Small</radio_item>
-		<radio_item bottom="-24" height="16" left="110"	name="radio2" width="98">Medium</radio_item>
-		<radio_item bottom="-24" height="16" left="220"	name="radio3" width="98">Large</radio_item>
-	</radio_group>
-	<text bottom="-64" height="10" left="12" name="text_box2">Chat Color:</text>
-	<color_swatch border_color="0.45098 0.517647 0.607843 1" bottom="-100" can_apply_immediately="true" color="1 1 1 1" control_name="UserChatColor" follows="top" height="47" label="You" left="148" name="user" width="44"/>
-	<color_swatch border_color="0.45098 0.517647 0.607843 1" bottom="-100" can_apply_immediately="true" color="1 1 1 1" control_name="AgentChatColor" follows="top" height="47" label="Others" left_delta="54" name="agent" width="44"/>
-	<color_swatch border_color="0.45098 0.517647 0.607843 1" bottom="-100" can_apply_immediately="true" color="0.6 0.6 1 1" follows="top" height="47" label="IM" left_delta="54" name="im" width="44"/>
-	<color_swatch border_color="0.45098 0.517647 0.607843 1" bottom="-100" can_apply_immediately="true" color="0.8 1 1 1" follows="top" height="47" label="System" left_delta="54" name="system" width="44"/>
-	<color_swatch border_color="0.45098 0.517647 0.607843 1" bottom="-100" can_apply_immediately="true" color="0.82 0.82 0.99 1" control_name="ScriptErrorColor" enabled="true" follows="top" height="47" label="Errors" left_delta="54" name="script_error" width="44"/>
-	<color_swatch border_color="0.45098 0.517647 0.607843 1" bottom="-150" can_apply_immediately="true" color="0.7 0.9 0.7 1" control_name="ObjectChatColor" height="47" label="Objects" left="148" mouse_opaque="true" name="objects" width="44"/>
-	<color_swatch border_color="0.45098 0.517647 0.607843 1" bottom="-150" can_apply_immediately="true" color="0.7 0.9 0.7 1" follows="top" height="47" label="Owner" left_delta="54" name="owner" width="44"/>
-	<color_swatch border_color="0.45098 0.517647 0.607843 1" bottom="-150" can_apply_immediately="true" color="0 0 0 1" follows="top" height="47" label="Bubble" left_delta="54" name="background" width="44"/>
-	<color_swatch border_color="0.45098 0.517647 0.607843 1" bottom="-150" can_apply_immediately="true" color="0.6 0.6 1 1" follows="top" height="47" label="URLs" left_delta="54" name="links" width="44"/>
+<panel label="Chat de Texto" name="chat">
+	  <text name="text_box">
+			 Tamaño Fuente de Chat:
+	  </text>
+	  <radio_group name="chat_font_size">
+			 <radio_item name="radio">
+					Pequeño
+			 </radio_item>
+			 <radio_item name="radio2">
+					Medio
+			 </radio_item>
+			 <radio_item name="radio3">
+					Grande
+			 </radio_item>
+	  </radio_group>
+	  <text name="text_box2">
+			 Color de Chat:
+	  </text>
+	  <color_swatch label="Tu" name="user"/>
+	  <color_swatch label="Otros" name="agent"/>
+	  <color_swatch label="MI" left_delta="54" name="im" width="44"/>
+	  <color_swatch label="Sistema" name="system"/>
+	  <color_swatch label="Errores" name="script_error"/>
+	  <color_swatch label="Objetos" name="objects"/>
+	  <color_swatch label="Propietario" name="owner"/>
+	  <color_swatch label="Burbuja" name="background"/>
+	  <color_swatch label="URLs" name="links"/>
 	
-	<text bottom_delta="-26" follows="top" height="10" left="12" name="text_box3">Chat Console:</text>
-	<spinner bottom_delta="-8" control_name="ChatPersistTime" decimal_digits="0" follows="top" height="16" increment="1" initial_val="10" label="Fade chat after" label_width="80" left="148" max_val="60" min_val="2" name="fade_chat_time" width="130"/>
-	<text bottom_delta="6" follows="top" height="10" left="282" name="text_box4">(seconds)</text>
-	<spinner bottom_delta="-6" decimal_digits="0" follows="top" height="16" increment="1" initial_val="10" left="340" max_val="50" min_val="1" name="max_chat_count" width="60"/>
-	<text bottom_delta="6" follows="left|top" height="10" left="405" name="text_box5">(# lines)</text>
-	<slider bottom_delta="-25" control_name="ConsoleBackgroundOpacity" follows="top" height="12" increment="0.05" initial_val="1" label="Opacity" left="148" max_val="1" min_val="0" name="console_opacity" value="0.4" width="200"/>
-	<check_box bottom_delta="-25" control_name="ChatFullWidth" follows="top" height="16" initial_value="false" label="Use full screen width (Requires restart)" name="chat_full_width_check"/>
-	<text bottom_delta="-22" height="10" left="12"	     mouse_opaque="false" name="text_box6" v_pad="0" width="135">Chat Options:</text>
-	<check_box bottom_delta="-8"  follows="top" height="16" initial_value="false" label="Close chat bar after hitting return" left="148" name="close_chat_on_return_check"/>
-	<check_box bottom_delta="-20" follows="top" height="16" initial_value="false" label="Arrow keys always move avatar when chatting" name="arrow_keys_move_avatar_check"/>
-	<check_box bottom_delta="-20" follows="top" height="16" initial_value="false" label="Show timestamps in Local Chat" name="show_timestamps_check"/>
-	<check_box bottom_delta="-20" control_name="ScriptErrorsAsChat" follows="top" height="16" initial_value="false" label="Show script errors and warnings as regular chat" name="script_errors_as_chat"/>
-	<check_box bottom_delta="-20" control_name="PlayTypingAnim" follows="top" height="16" initial_value="true" label="Play typing animation when chatting" name="play_typing_animation"/>
-	<text bottom="-365" height="10" left="12" name="text_box7">Bubble Chat:</text>
-	<check_box bottom="-370" control_name="UseChatBubbles" height="16" initial_value="false" label="Show chat bubbles" left="148" name="bubble_text_chat"/>
-	<slider bottom="-386" can_edit_text="false" control_name="ChatBubbleOpacity" height="12" increment="0.05" initial_val="1" label="Opacity" max_val="1" min_val="0" name="bubble_chat_opacity" value="0.5" width="200"/>
+	  <text name="text_box3">
+			 Consola de Chat:
+	  </text>
+	  <spinner label="Desvanecer Chat tras" name="fade_chat_time" label_width="107" width="160"/>
+	  <text name="text_box4"  left="312" >
+			 (segundos)
+	  </text>
+	  <spinner left="370" name="max_chat_count"/>
+	  <text left="435" name="text_box5">
+			 (# líneas)
+	  </text>
+	  <slider label="Opacidad" name="console_opacity"/>
+	  <check_box label="Usar Ancho completo de pantalla (Requeire reinicio)" name="chat_full_width_check"/>
+	  <text name="text_box6" >
+			 Opciones de Chat:
+	  </text>
+	  <check_box label="Cerrar barra de chat al presionar Intro" name="close_chat_on_return_check"/>
+	  <check_box label="Las teclas de cursor siempre mueven al avatar al chatear" name="arrow_keys_move_avatar_check"/>
+	  <check_box label="Mostrar horario en el chat local" name="show_timestamps_check"/>
+	  <check_box label="Mostrar errores de scripts y avisos como chat regular" name="script_errors_as_chat"/>
+	  <check_box label="Ejecutar animación de escribir al chatear" name="play_typing_animation"/>
+	  <text name="text_box7">
+			 Burbuja de Chat:
+	  </text>
+	  <check_box label="Mostrar Burbuja de chat" name="bubble_text_chat"/>
+	  <slider label="Opacidad" name="bubble_chat_opacity"/>
 <!--
 	<text bottom="-410" height="10" left="12" name="text_translate_chat">Translate Chat:</text>
 	<check_box bottom="-417" control_name="TranslateChat" height="16" initial_value="false" label="Use machine translation while chatting (powered by Google)" left="148" name="translate_chat"/>

@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<panel border="true" bottom="-409" height="408" label="Input &amp; Camera" left="102" name="Input panel" width="517">
-	<text bottom="-20" follows="top" height="10" left="10" name=" Mouselook Options:">Mouselook Options:</text>
-	<text bottom="-20" follows="top" height="10" left="148" name=" Mouse Sensitivity:">Mouse Sensitivity:</text>
-	<slider_bar bottom="-26" follows="top" height="16" increment="0.25" initial_val="2" left="276" max_val="15" min_val="0" name="mouse_sensitivity" width="128"/>
-	<check_box bottom_delta="-18" follows="top" height="16" label="Invert Mouse" left="148" name="invert_mouse"/>
-	<check_box bottom_delta="-20" follows="top" height="16" initial_value="false" label="Show Avatar in Mouselook" name="first_person_avatar_visible"/>
-	<text bottom_delta="-30" follows="top" height="10" left="10" name=" Auto Fly Options:">Auto Fly Options:</text>
-	<check_box bottom_delta="-6" follows="top" height="16" label="Fly/land on holding up/down" left="148" name="automatic_fly"/>
-	<text bottom_delta="-30" follows="top" height="10" left="10" name=" Camera Options:">Camera Options:</text>
-  <text bottom_delta="0" follows="top" height="10" left="148" name="camera_fov_label">Camera View Angle:</text>
-  <slider bottom_delta="-6" can_edit_text="true" decimal_digits="2" follows="top" width="128" height="16" increment=".025" initial_val="1.57" left="276" max_val="2.97" min_val=".17" name="camera_fov" value="60"/>
-  <text bottom_delta="-14" follows="top" height="10" left="148" name="Camera Follow Distance:" width="128">Camera Follow Distance:</text>
-	<slider bottom_delta="-6" can_edit_text="true" control_name="CameraOffsetScale" decimal_digits="2" follows="top" height="16" increment=".025" initial_val="1" left="276" min_val=".5" max_val="3" name="camera_offset_scale" value="1" width="128"/>
-	<check_box bottom_delta="-24" follows="top" initial_value="false" label="Automatic Edit Camera Movement" left="148" name="edit_camera_movement" tool_tip="Use automatic camera positioning when entering and exiting edit mode"/>
-	<check_box bottom_delta="-18" follows="top" height="16" initial_value="false" label="Automatic Appearance Camera Movement" left="148" name="appearance_camera_movement" tool_tip="Use automatic camera positioning while in edit mode"/>
-	<check_box bottom_delta="-18" follows="top" height="16" initial_value="false" label="Unsit Avatar on Camera Reset" left="148" name="unsit_on_camera_reset" tool_tip="Stand up automatically when you press Esc and the camera switches to third person mode"/>
-	<button bottom_delta="-30" follows="top" font="SansSerif" height="20" label="Joystick Setup" name="joystick_setup_button" width="155"/>
+<panel label="Disp. y Cámara" name="Input panel">
+	  <text name=" Mouselook Options:">
+			 Vista Subjetiva:
+	  </text>
+	  <text name=" Mouse Sensitivity:">
+			 Sensibilidad del Ratón:
+	  </text>
+	  <check_box label="Invertir el Ratón" name="invert_mouse"/>
+	  <check_box label="Mostrar Avatar en Vista Subjetiva" name="first_person_avatar_visible"/>
+	  <text name=" Auto Fly Options:">
+			 Opciones de Vuelo:</text>
+	  <check_box label="Despegar/Aterrizar al pulsar RePág/AvPág" name="automatic_fly"/>
+	  <text left="10" name=" Camera Options:">
+			 Opciones de Cámara:
+	  </text>
+	  <text name="camera_fov_label">
+			 Ángula de vista de la Cámara:
+	  </text>
+	  <slider left="336" name="camera_fov"/>
+	  <text name="Camera Follow Distance:" width="198">
+			 Distancia de seguimiento de la Cámara:
+	  </text>
+	  <slider left="336" name="camera_offset_scale"/>
+	  <check_box label="Reorientar la cámara el editar" name="edit_camera_movement" tool_tip="Posicionar la Cámara automáticamente al entrar y salir del modo de Edición"/>
+	  <check_box label="Reorientar la cámara el editar la apariencia" name="appearance_camera_movement" tool_tip="Posicionar la Cámara automáticamente mientras se esté en modo edición del avatar"/>
+	  <check_box label="Levantar el avatar al reiniciar la cámara" name="unsit_on_camera_reset" tool_tip="Levanta al avatar automárticamente cuando presiones la tecla ESC y la cámara cambie a modo de vista en tercera persona"/>
+	  <button label="Configuración Joystick" name="joystick_setup_button"/>
 </panel>

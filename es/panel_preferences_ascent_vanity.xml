@@ -1,55 +1,66 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<panel top="20" left="10" height="400" width="512" border="true" label="Vanity" name="ascvan">
-  <tab_container label="Singularity Vanity" bottom="0" height="440" width="497" name="Ascent Vanity" tab_min_width="90">
-    <panel border="true" left="1" bottom="-190" height="180" width="500" label="Main  (General)" name="General">
-      <check_box bottom_delta="-25" control_name="AscentStoreSettingsPerAccount" follows="top" height="16" initial_value="true" label="Where applicable, save Vanity settings per-account." left="10" tool_tip="Saves settings per-account, allowing easier customization for alts." name="use_account_settings_check"/>
-      <check_box bottom_delta="-20" control_name="AscentDisableTeleportScreens" follows="top" height="16" initial_value="true" label="Hide the Teleport progress screens" tool_tip="If checked, the viewer will hide the teleport progress screen, allowing you to continue to read IMs." name="disable_tp_screen_check"/>
-      <check_box bottom_delta="-20" control_name="OptionPlayTpSound" follows="top" height="16" initial_value="true" label="Play the Teleport sound when moving between sims" tool_tip="Viewer will play the wooshing TP noise on teleport." name="tp_sound_check"/>
-      <check_box bottom_delta="-20" control_name="AscentDisableLogoutScreens" follows="top" height="16" initial_value="true" label="Hide the Login/Logout progress screens" tool_tip="If checked, the viewer will hide the login/logout progress screen." name="disable_logout_screen_check"/>
-      <check_box bottom_delta="-20" control_name="SGDisableChatAnimation" follows="top" height="16" initial_value="false" label="Disable chat, whisper and shout animations" tool_tip="Remove chat animations from your own avatar. Effect visible to everyone" name="disable_chat_animation"/>
-    </panel>
-    <panel border="true" left="1" bottom="-190" height="180" width="500" label="Tags/Colors" name="TagsColors">
-      <!-- Client tag options -->
-      <check_box bottom_delta="-25" control_name="AscentUseTag" follows="top" height="16" initial_value="true" label="Use Client Tag:" left="10" tool_tip="Enabling this will show your client tag on your avatar name locally." name="show_my_tag_check"/>
-      <combo_box follows="top" bottom_delta="-24" height="18" left_delta="24" max_chars="32" tool_tip="The client tag (And subsequent color) to broadcast. Overridden locally by Custom Tag/Color." name="tag_spoofing_combobox" width="130">
-        <combo_item name="Singularity" value="f25263b7-6167-4f34-a4ef-af65213b2e39">Singularity</combo_item>
-      </combo_box>
-      <check_box bottom_delta="-23" control_name="AscentShowSelfTag" follows="top" height="16" initial_value="true" label="Display client tag to self" left_delta="-24" tool_tip="Choose whether others see that you enjoy Singularity." name="show_self_tag_check"/>
-      <check_box bottom_delta="-20" control_name="AscentShowSelfTagColor" follows="top" height="16" initial_value="true" label="Display client tag color to self" tool_tip="Enabling this set your avatar name color to your client tag color or custom set color." name="show_self_tag_color_check"/>
-      <check_box bottom_delta="-20" control_name="AscentShowFriendsTag" follows="top" height="16" initial_value="true" label="Display friend client tags as (Friend)" tool_tip="Enabling this changes your friends' client tags to (Friend)." name="show_friend_tag_check"/>
-      <!-- End of Left Side -->
-      <check_box bottom_delta="87" control_name="AscentUseCustomTag" follows="top" height="16" initial_value="true" label="Use a custom color and label (Local only)" left_delta="230" tool_tip="Enabling this will let you set your own name tag to show up with your custom client and tag color. This only shows up to yourself." name="customize_own_tag_check"/>
-      <text bottom_delta="-17" left_delta="25" follows="top" height="10" name="custom_tag_label_text">Label:</text>
-      <line_editor bottom_delta="-6" follows="top" font="SansSerif" height="18" left_delta="35" name="custom_tag_label_box" tool_tip="The custom string you would like to replace your client tag with (Local only)" width="100"/>
-      <text bottom_delta="6" left_delta="110" follows="top" height="10" name="custom_tag_color_text">Color:</text>
-      <color_swatch border_color="0.45098 0.517647 0.607843 1" bottom_delta="-22"        can_apply_immediately="false" color="1 1 1 1" follows="top" height="34" left_delta="35" name="custom_tag_color_swatch" control_name="AscentCustomTagColor" tool_tip="The custom color you would like to replace your client color with (Local only)" width="30" />
-      <check_box bottom_delta="-8" control_name="AscentShowOthersTag" follows="top" height="16" initial_value="true" label="Display client tag for others" left_delta="-205" tool_tip="Enabling this will show client tag names on others' avatar names." name="show_other_tag_check"/>
-      <check_box bottom_delta="-20" control_name="AscentShowOthersTagColor" follows="top" height="16" initial_value="true" label="Display client tag color for others" left_delta="0" tool_tip="Enabling this sets others' avatar name color to their client's color." name="show_client_tag_color_check"/>
-      <check_box bottom_delta="-20" control_name="AscentShowIdleTime" follows="top" height="16" initial_value="true" label="Show Idle Time" tool_tip="Enabling this will show the amount of time an avatar has been idle." name="show_idle_time_check"/>
-      <check_box bottom_delta="-20" control_name="AscentUpdateTagsOnLoad" follows="top" height="16" initial_value="true" label="Automatically check website for updates to client definitions" left_delta="-230" tool_tip="Enabling this will allow Singularity to download fresh definitions when needed." name="update_tags_check"/>
-      <button bottom_delta="0" control_name="ManualUpdate" name="update_clientdefs" follows="top" label="Manual Update" height="18" left_delta="340" width="110"/>
-      <!-- End of Client Tag settings -->
-      <text bottom_delta="-25" follows="top" height="10" left="20" name="effects_color_textbox">Color For My Effects:</text>
-      <color_swatch border_color="0.45098 0.517647 0.607843 1" bottom_delta="-34" can_apply_immediately="true" color="1 1 1 1" control_name="EffectColor" follows="top" height="47" label="Effects" left_delta="138" name="effect_color_swatch" width="44"/>
-      <check_box bottom_delta="-20" control_name="AscentUseStatusColors" follows="top" height="16" initial_value="true" label="Use user status colors (Friend, Linden, etcetera below)" left="10" tool_tip="Enabling this will show people who match specific criteria (Lindens, Estate owners, friends, muted people) with the color you've set below." name="use_status_check"/>
-      <text bottom_delta="-20" follows="top" height="10" left_delta="10" name="friends_color_textbox">Color For:
+<panel label="Vanity" name="ascvan">
+	  <tab_container label="Singularity Vanity" name="Ascent Vanity">
+			 <panel label="Principal  (General)" name="General">
+					<check_box label="Cuando se aplicable, guardar Ajustes Vaninty por cuenta." tool_tip="Guarda ajustes individuales por cuenta, permitiendo una mas fácil personalización de Alts." name="use_account_settings_check"/>
+					<check_box label="Ocultar pantalla de progreso de Telerport" tool_tip="Activado, el visor ocultará la pantalla de progreso de Teleportación, pemitiendo leer MIs.." name="disable_tp_screen_check"/>
+					<check_box label="Reproducir sonidos de teleport cuando al cambiar de sim" tool_tip="El Visor reproducirá el sonido de trnasportación al hacer un teleport." name="tp_sound_check"/>
+					<check_box label="Ocultar la pantalla de inicio/cierre de sesión" tool_tip="Marcadao, el visor ocultará la pantalla de progreso de inicio/cierre de sesión." name="disable_logout_screen_check"/>
+					<check_box label="Desactivar animaciones de chat, susurro y gritos" tool_tip="Quiar las animaciones de tu avatar. El efecto es visible para todos" name="disable_chat_animation"/>
+			 </panel>
+			 <panel label="Tags/Colores" name="TagsColors">
+					<!-- Client tag options -->
+					<check_box label="Usar Tag de Visor:" left="10" tool_tip="Activándolo mostrará el tag de tu visor, en forma local, sobre tu nombre de avatar." name="show_my_tag_check"/>
+					<combo_box tool_tip="Tag del Visor ( Y colores subsecuentes) a transmitir. Sobreescribir en forma local por Tag/Colores personalizados." name="tag_spoofing_combobox">
+						  <combo_item name="Singularity" >
+								 Singularity
+						  </combo_item>
+					</combo_box>
+					<check_box label="Mostrarte tag de cliente" tool_tip="Elige el color que verás del tag de tu visor." name="show_self_tag_check"/>
+					<check_box label="Mostrarte color del tag de cliente" tool_tip="Activándolo,  ajustará el nombre de avatar en el color de tu cliente o en el color personalizado." name="show_self_tag_color_check"/>
+					<check_box label="Ver tags de amigos como (Amigo)" tool_tip="Activándolo cambia el tag de cliente de tus amigos a (Amigo)." name="show_friend_tag_check"/>
+					<!-- End of Left Side -->
+					<check_box label="Usar color y etiqueta personalizadas (Sólo local)" tool_tip="Activándolo te permitirá ajustar tu tag de nombre para mostrar con tu tag de cliente y color  personalizados. Esto sólo funciona para ti mismo." name="customize_own_tag_check"/>
+					<text bottom_delta="-17" left_delta="25" follows="top" height="10" name="custom_tag_label_text">
+						  Etiqueta:
+					</text>
+					<line_editor left_delta="45" name="custom_tag_label_box" tool_tip="Texto personalizado que usarás para reemplazar el tag de tu visor (Sólo Local)"/>
+					<text name="custom_tag_color_text">
+						  Color:
+					</text>
+					<color_swatch name="custom_tag_color_swatch" tool_tip="Color personalizado que usarás para reemplazar el color del tag de tu visor (Sólo Local)"/>
+					<check_box label="Mostrar Tag de Visor de los demás" tool_tip="Activándolo mostrará el nombre de Tag de visor sobre los nombres de avatar de otros usuarios." name="show_other_tag_check"/>
+					<check_box label="Mostrar color de Tag de visor de los demás" tool_tip="Activándolo fijará el color del tag del visor de los demás a su propio color." name="show_client_tag_color_check"/>
+					<check_box label="Mostrar tiempo inactivo" tool_tip="Activándolo mostrará la cantidad de tiempo que el avatar está inactivo." name="show_idle_time_check"/>
+					<check_box label="Chequear automáticamente actualizaciones de clientes" tool_tip="Activándolo permite a Singularity descargar nuevas definiciones de clientes cuando sea necesario." name="update_tags_check"/>
+					<button name="update_clientdefs" label="Actualización Manual" height="18" left_delta="310" width="150"/>
+					<!-- End of Client Tag settings -->
+					<text name="effects_color_textbox">
+						  Color para Mis Efectos:
+					</text>
+					<color_swatch label="Efectos" name="effect_color_swatch"/>
+					<check_box label="Utilizar Color de Tipo de usuario (Amigo, Linden, etc.)" left="10" tool_tip="Activándolo mostrará con el color definido abajo a la gente que cumple con determinado criterio de tipo de usuario (Lindens, Propietarios de Estado, amigo, usuarios bloquedos)." name="use_status_check"/>
+					<text name="friends_color_textbox">
+						  Color Para:
 (Radar, Tag, Minimap)</text>
-      <color_swatch border_color="0.45098 0.517647 0.607843 1" bottom_delta="-34" can_apply_immediately="true" color="1 1 1 1" control_name="AscentFriendColor" follows="top" height="47" label="Friends" left_delta="138" name="friend_color_swatch" width="44" tool_tip="Color of Friends"/>
-      <color_swatch border_color="0.45098 0.517647 0.607843 1" bottom_delta="0" can_apply_immediately="true" color="1 1 1 1" control_name="AscentEstateOwnerColor" follows="top" height="47" label="Estate" left_delta="54" name="estate_owner_color_swatch" width="44" tool_tip="Color of Estate Managers"/>
-      <color_swatch border_color="0.45098 0.517647 0.607843 1" bottom_delta="0" can_apply_immediately="true" color="0.6 0.6 1 1" control_name="AscentLindenColor" follows="top" height="47" label="Lindens" left_delta="54" name="linden_color_swatch" width="44" tool_tip="Color of Lindens"/>
-      <color_swatch border_color="0.45098 0.517647 0.607843 1" bottom_delta="0" can_apply_immediately="true" color="0.8 1 1 1" control_name="AscentMutedColor" follows="top" height="47" label="Muted" left_delta="54" name="muted_color_swatch" width="44" tool_tip="Color of Muted"/>
-    </panel>
-    <panel border="true" left="1" bottom="-190" height="180" width="500" label="Body Dynamics" name="Body Dynamics">
-      <check_box bottom_delta="-25" follows="top" height="16" label="Enable enhanced physics on avatar breasts" left="10" name="EmBreastsToggle" control_name="EmeraldBreastPhysicsToggle" tool_tip="You must hit apply before these controls will activate or deactivate"/>
-      <slider bottom_delta="-20" left="10" name="EmeraldBoobMass" control_name="EmeraldBoobMass" decimal_digits="0" follows="top" height="18" increment="1" label="Breast mass:" label_width="100" max_val="100" min_val="1" can_edit_text="true" width="250"/>
-      <slider bottom_delta="-20" left_delta="0" name="EmeraldBoobHardness" control_name="EmeraldBoobHardness" decimal_digits="0" follows="top" height="18" increment="1" label="Breast rebound:" label_width="100" max_val="100" min_val="1" can_edit_text="true" width="250"/>
-      <slider bottom_delta="-20" name="EmeraldBoobVelMax" control_name="EmeraldBoobVelMax" decimal_digits="0" follows="top" height="18" increment="1" label="Breast max vel:" label_width="100" max_val="100" min_val="1" can_edit_text="true" width="250"/>
-      <slider bottom_delta="-20" name="EmeraldBoobFriction" control_name="EmeraldBoobFriction" decimal_digits="0" follows="top" height="18" increment="1" label="Breast friction:" label_width="100" max_val="100" min_val="1" can_edit_text="true" width="250"/>
-      <slider bottom_delta="-20" name="EmeraldBoobVelMin" control_name="EmeraldBoobVelMin" decimal_digits="0" follows="top" height="18" increment="1" label="Breast min vel:" label_width="100" max_val="100" min_val="1" can_edit_text="true" width="250"/>
-      <text bottom_delta="-20" height="15" left="10" name="av_mod_textbox" follows="top">Avatar Offset Modifiers</text>
-      <spinner bottom_delta="-20" decimal_digits="5" follows="top" height="16" increment="0.05" label="X Modifier" label_width="65" left_delta="5" max_val="0.15" min_val="-0.15" name="X Modifier" width="128" control_name="AscentAvatarXModifier" tool_tip="Use this to manipulate, to a degree, your avatar bounding box. This can be used to distort orbiters, or to raise you up or down without altering your shape."/>
-      <spinner bottom_delta="-20" decimal_digits="5" follows="top" height="16" increment="0.05" label="Y Modifier" label_width="65" max_val="0.20" min_val="-0.20" name="Y Modifier" width="128" control_name="AscentAvatarYModifier" tool_tip="Use this to manipulate, to a degree, your avatar bounding box. This can be used to distort orbiters, or to raise you up or down without altering your shape."/>
-      <spinner bottom_delta="-20" decimal_digits="5" follows="top" height="16" increment="0.1" label="Z Modifier" label_width="65" max_val="5.0" min_val="-5.0" name="Z Modifier" width="128" control_name="AscentAvatarZModifier" tool_tip="Use this to manipulate, to a degree, your avatar bounding box. This can be used to distort orbiters, or to raise you up or down without altering your shape."/>
-    </panel>
-  </tab_container>
+					<color_swatch label="Amigos" name="friend_color_swatch" tool_tip="Color para los amigos"/>
+					<color_swatch label="Estado" name="estate_owner_color_swatch" tool_tip="Color para Administrador de Regiones"/>
+					<color_swatch label="Lindens" name="linden_color_swatch" tool_tip="Color para empleados de Linden Lab"/>
+					<color_swatch label="Ignorados" name="muted_color_swatch" tool_tip="Color para usuarios ignorados o bloqueados"/>
+			 </panel>
+			 <panel label="Fiísica de Avatar" name="Body Dynamics">
+					<check_box label="Activar física avanzada de los senos del avatar" name="EmBreastsToggle" tool_tip="Deberás seleccionar Aplicar para activar o desactivar estos controles"/>
+					<slider name="EmeraldBoobMass" label="Masa del Seno:"/>
+					<slider name="EmeraldBoobHardness" label="Rebote de Seno:" />
+					<slider name="EmeraldBoobVelMax" label="Vel.Máx. Senos:" />
+					<slider name="EmeraldBoobFriction" label="Fricción de Senos:"/>
+					<slider name="EmeraldBoobVelMin" label="Vel.Mín.Senos:"/>
+					<text name="av_mod_textbox">
+						  Modificar Desplazamientos del Avatar
+					</text>
+					<spinner label="Modificador X" name="X Modifier" tool_tip="Utiliza esto para manipular, en grados, el delimitador del avatar. Puede ser utilizado para distorsionar las órbitas, o para elevar o aumentar los senos sin alterar el cuerpo del avatar." width="133" label_width="70"/>
+					<spinner label="Modificador Y" name="Y Modifier" tool_tip="Utiliza esto para manipular, en grados, el delimitador del avatar. Puede ser utilizado para distorsionar las órbitas, o para elevar o aumentar los senos sin alterar el cuerpo del avatar." width="133" label_width="70"/>
+					<spinner label="Modificador Z" name="Z Modifier" tool_tip="Utiliza esto para manipular, en grados, el delimitador del avatar. Puede ser utilizado para distorsionar las órbitas, o para elevar o aumentar los senos sin alterar el cuerpo del avatar." width="133" label_width="70"/>
+			 </panel>
+	  </tab_container>
 </panel>
