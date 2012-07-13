@@ -3,279 +3,282 @@
      It is only for those strings which don't belong in a floater.
      For example, the strings used in avatar chat bubbles, and strings
      that are returned from one component and may appear in many places-->
-<strings>
+	  <strings>
 
-	<string name="CURRENCY">L$</string>
-	<string name="GRID_OWNER">Linden Lab</string>
+			 <string name="CURRENCY">L$</string>
+			 <string name="GRID_OWNER">Linden Lab</string>
 
-	<string name="hippo_label_free">free</string>
-	<string name="hippo_label_week">week</string>
-	<string name="TeleportOfferMaturity">
-	  [NAME] is offering a TP to [DESTINATION]
-	</string>
-	<string name="TeleportLureMaturity">
-	  [NAME]'s teleport lure is to [DESTINATION]
-	</string>
+			 <string name="hippo_label_free">free</string>
+			 <string name="hippo_label_week">week</string>
+			 <string name="TeleportOfferMaturity">
+					[NAME] te ofrece un TP a [DESTINATION]
+			 </string>
+			 <string name="TeleportLureMaturity">
+					[NAME]'s teleport lure is to [DESTINATION]
+			 </string>
+			 <string name="AvatarIdle">
+					Inactivo por [MINUTES]min
+			 </string>
 
-	<!-- Default Args - these arguments will be replaced in all strings -->
-	<string name="SECOND_LIFE">Second Life</string>
-	<string name="APP_NAME">Singularity Viewer</string>
-	<string name="CAPITALIZED_APP_NAME">SINGULARITY VIEWER</string>
-	<string name="SECOND_LIFE_GRID">Second Life Grid</string>
-	<string name="SUPPORT_SITE">Second Life Support Portal</string>
+			 <!-- Default Args - these arguments will be replaced in all strings -->
+			 <string name="SECOND_LIFE">Second Life</string>
+			 <string name="APP_NAME">Singularity Viewer</string>
+			 <string name="CAPITALIZED_APP_NAME">SINGULARITY VIEWER</string>
+			 <string name="SECOND_LIFE_GRID">Grid Second Life</string>
+			 <string name="SUPPORT_SITE">Portal de Soporte de Second Life</string>
 
-	<!-- starting up -->
-	<string name="StartupDetectingHardware">Detecting hardware...</string>
-	<string name="StartupLoading">Loading [APP_NAME]...</string>
-	<string name="StartupClearingCache">Clearing cache...</string>
-	<string name="StartupInitializingTextureCache">Initializing Texture Cache...</string>
-	<string name="StartupInitializingVFS">Initializing VFS...</string>
-  <string name="StartupRequireDriverUpdate">Graphics Initialization Failed. Please Update Your Graphics Driver!</string>
+			 <!-- starting up -->
+			 <string name="StartupDetectingHardware">Detectando hardware...</string>
+			 <string name="StartupLoading">Cargando [APP_NAME]...</string>
+			 <string name="StartupClearingCache">Limpiadno caché...</string>
+			 <string name="StartupInitializingTextureCache">Inicializando Caché de Testuras...</string>
+			 <string name="StartupInitializingVFS">Inicializando VFS...</string>
+			 <string name="StartupRequireDriverUpdate">¡Ha fallado la inicialización gráfica. Por favor, actualiza los controladores gráficos!</string>
 
-	<!--  progress -->
-	<string name="ProgressRestoring">Restoring...</string>
-	<string name="ProgressChangingResolution">Changing Resolution...</string>
-	<!-- Login -->
-	<string name="LoginInProgress">Logging in. [APP_NAME] may appear frozen.  Please wait.</string>
-	<string name="LoginInProgressNoFrozen">Logging in...</string>
-	<string name="LoginAuthenticating">Authenticating</string>
-	<string name="LoginMaintenance">Performing account maintenance...</string>
-	<string name="LoginAttempt">Previous login attempt failed. Logging in, attempt [NUMBER]</string>
-	<string name="LoginPrecaching">Loading world...</string>
-	<string name="LoginInitializingBrowser">Initializing embedded web browser...</string>
-	<string name="LoginInitializingMultimedia">Initializing multimedia...</string>
-  <string name="LoginInitializingFonts">Loading fonts...</string>
-	<string name="LoginVerifyingCache">Verifying cache files (can take 60-90 seconds)...</string>
-	<string name="LoginProcessingResponse">Processing Response...</string>
-	<string name="LoginInitializingWorld">Initializing World...</string>
-	<string name="LoginDecodingImages">Decoding images...</string>
-	<string name="LoginInitializingQuicktime">Initializing QuickTime...</string>
-	<string name="LoginQuicktimeNotFound">QuickTime not found - unable to initialize.</string>
-	<string name="LoginQuicktimeOK">QuickTime initialized successfully.</string>
-	<string name="LoginRequestSeedCapGrant">Requesting region capabilities...</string>
-	<string name="LoginRetrySeedCapGrant">Requesting region capabilities, attempt [NUMBER]...</string>
-	<string name="LoginWaitingForRegionHandshake">Waiting for region handshake...</string>
-	<string name="LoginConnectingToRegion">Connecting to region...</string>
-	<string name="LoginDownloadingClothing">Downloading clothing...</string>
+			 <!--  progress -->
+			 <string name="ProgressRestoring">Restaurando...</string>
+			 <string name="ProgressChangingResolution">Cmabiando la Ressolución...</string>
+			 <!-- Login -->
+			 <string name="LoginInProgress">Iniciando sesión. [APP_NAME] puede aparecer congelado.  Espera por favor.</string>
+			 <string name="LoginInProgressNoFrozen">Iniciando sesión...</string>
+			 <string name="LoginAuthenticating">Autenticando</string>
+			 <string name="LoginMaintenance">Realizando mantenimiento de cuentas...</string>
+			 <string name="LoginAttempt">Ha fallado el inicio de sesión previo. Iniciando sesión, intento [NUMBER]</string>
+			 <string name="LoginPrecaching">Cargando el Mundo...</string>
+			 <string name="LoginInitializingBrowser">iniciando navegador web incorporado...</string>
+			 <string name="LoginInitializingMultimedia">Inicializando multimedia...</string>
+			 <string name="LoginInitializingFonts">Cargando fuentes...</string>
+			 <string name="LoginVerifyingCache">Verificando archivos de caché (puede demorar entre 60-90 segundos)...</string>
+			 <string name="LoginProcessingResponse">Procesando Respuesta...</string>
+			 <string name="LoginInitializingWorld">Inicializando el Mundo...</string>
+			 <string name="LoginDecodingImages">Decodificando Imágenes...</string>
+			 <string name="LoginInitializingQuicktime">Inicializando QuickTime...</string>
+			 <string name="LoginQuicktimeNotFound">No se ha encontrado QuickTime - incapaz de iniciarlo.</string>
+			 <string name="LoginQuicktimeOK">QuickTime ha sido inicializado satisfactoriamente.</string>
+			 <string name="LoginRequestSeedCapGrant">Solicitando capacidades de la Región...</string>
+			 <string name="LoginRetrySeedCapGrant">Solicitando capacidades de la Región, intento [NUMBER]...</string>
+			 <string name="LoginWaitingForRegionHandshake">Esperando saludo de la Región...</string>
+			 <string name="LoginConnectingToRegion">Conectando a la región...</string>
+			 <string name="LoginDownloadingClothing">Descargando ropas...</string>
 
-	<string name="LoginFailed">Login failed.</string>
-	<string name="Quit">Quit</string>
+			 <string name="LoginFailed">Inicio de sesión fallido.</string>
+			 <string name="Quit">Salir</string>
 
-	<!-- Disconnection -->
-	<string name="AgentLostConnection">This region may be experiencing trouble.  Please check your connection to the Internet.</string>
-	<string name="SavingSettings">Saving your settings...</string>
-	<string name="LoggingOut">Logging out...</string>
-	<string name="ShuttingDown">Shutting down...</string>
-	<string name="YouHaveBeenDisconnected">You have been disconnected from the region you were in.</string>
-	<string name="SentToInvalidRegion">You were sent to an invalid region.</string>
+			 <!-- Disconnection -->
+			 <string name="AgentLostConnection">Esta región está experimentando problemas.  Revisa por favor tu conexión a Internet.</string>
+			 <string name="SavingSettings">Guardando tus configuraciones...</string>
+			 <string name="LoggingOut">Cerrando sesión...</string>
+			 <string name="ShuttingDown">Cerrando...</string>
+			 <string name="YouHaveBeenDisconnected">Has sido desconectado de la región donde te encontrabas.</string>
+			 <string name="SentToInvalidRegion">Se te ha enviado a una región no válida.</string>
 
-	<!-- Tooltip, llhoverview.cpp -->
-	<string name="TooltipPerson">Person</string><!-- Object under mouse pointer is an avatar -->
-	<string name="TooltipNoName">(no name)</string> <!-- No name on an object -->
-	<string name="TooltipOwner">Owner:</string> <!-- Owner name follows -->
-	<string name="TooltipPublic">Public</string> <!-- Public permissions on an object -->
-	<string name="TooltipIsGroup">(Group)</string> <!-- The name before this text is that of a group -->
-	<string name="TooltipFlagScript">Script</string>
-	<string name="TooltipFlagPhysics">Physics</string>
-	<string name="TooltipFlagTouch">Touch</string>
-	<string name="TooltipFlagL$">[CURRENCY]</string>
-	<string name="TooltipFlagDropInventory">Drop Inventory</string>
-	<string name="TooltipFlagPhantom">Phantom</string>
-	<string name="TooltipFlagTemporary">Temporary</string>
-	<string name="TooltipFlagRightClickMenu">(Right-click for menu)</string>
-	<string name="TooltipFreeToCopy">Free to copy</string>
-	<string name="TooltipForSaleL$">For Sale: [CURRENCY][AMOUNT]</string> <!-- L$ version -->
-	<string name="TooltipForSaleMsg">For Sale: [MESSAGE]</string> <!-- Message (RetrievingData) -->
-	<string name="TooltipFlagGroupBuild">Group Build</string>
-	<string name="TooltipFlagNoBuild">No Build</string>
-	<string name="TooltipFlagNoEdit">Group Build</string>
-	<string name="TooltipFlagNotSafe">Not Safe</string><!-- damage area -->
-	<string name="TooltipFlagNoFly">No Fly</string>
-	<string name="TooltipFlagGroupScripts">Group Scripts</string>
-	<string name="TooltipFlagNoScripts">No Scripts</string>
-	<string name="TooltipLand">Land:</string>
-	<string name="TooltipMustSingleDrop">Only a single item can be dragged here</string>
+			 <!-- Tooltip, llhoverview.cpp -->
+			 <string name="TooltipPerson">Persona</string><!-- Object under mouse pointer is an avatar -->
+			 <string name="TooltipNoName">(sin nombre)</string> <!-- No name on an object -->
+			 <string name="TooltipOwner">Propietario:</string> <!-- Owner name follows -->
+			 <string name="TooltipPublic">Público</string> <!-- Public permissions on an object -->
+			 <string name="TooltipIsGroup">(Grupo)</string> <!-- The name before this text is that of a group -->
+			 <string name="TooltipFlagScript">Script</string>
+			 <string name="TooltipFlagPhysics">Físico</string>
+			 <string name="TooltipFlagTouch">Tocar</string>
+			 <string name="TooltipFlagL$">[CURRENCY]</string>
+			 <string name="TooltipFlagDropInventory">Soltar Inventario</string>
+			 <string name="TooltipFlagPhantom">Fantasma</string>
+			 <string name="TooltipFlagTemporary">Temporario</string>
+			 <string name="TooltipFlagRightClickMenu">(Botón derecho para menú)</string>
+			 <string name="TooltipFreeToCopy">Libre para copiar</string>
+			 <string name="TooltipForSaleL$">En venta: [CURRENCY][AMOUNT]</string> <!-- L$ version -->
+			 <string name="TooltipForSaleMsg">En venta: [MESSAGE]</string> <!-- Message (RetrievingData) -->
+			 <string name="TooltipFlagGroupBuild">Construir Grupo</string>
+			 <string name="TooltipFlagNoBuild">No Construir</string>
+			 <string name="TooltipFlagNoEdit">Construir Grupo</string>
+			 <string name="TooltipFlagNotSafe">No seguro</string><!-- damage area -->
+			 <string name="TooltipFlagNoFly">No volar</string>
+			 <string name="TooltipFlagGroupScripts">Scripts de Grupo</string>
+			 <string name="TooltipFlagNoScripts">Sin Scripts</string>
+			 <string name="TooltipLand">Terreno:</string>
+			 <string name="TooltipMustSingleDrop">Sólo un único item puede ser arrastrado aquí</string>
 
-	<string name="TooltipOutboxDragToWorld">You can not rez items in your merchant outbox</string>
-	<string name="TooltipOutboxNoTransfer">One or more of these objects cannot be sold or transferred.</string>
-	<string name="TooltipOutboxNotInInventory">Your merchant outbox can only accept items directly from your inventory</string>
-	<string name="TooltipOutboxWorn">You can not put items you are wearing into your merchant outbox</string>
-	<string name="TooltipOutboxCallingCard">You can not put calling cards into your merchant outbox</string>
-	<string name="TooltipOutboxFolderLevels">Depth of nested folders exceeds 3</string>
-	<string name="TooltipOutboxTooManyFolders">Subfolder count in top-level folder exceeds 20</string>
-	<string name="TooltipOutboxTooManyObjects">Item count in top-level folder exceeds 200</string>
+			 <string name="TooltipOutboxDragToWorld">No puedes rezear item en tu Merchant Outbox</string>
+			 <string name="TooltipOutboxNoTransfer">Uno o más de estos objetos no pueden ser vendidos o transferidos.</string>
+			 <string name="TooltipOutboxNotInInventory">Tu Merchant Outbox solo puede aceptar items de tu inventario</string>
+			 <string name="TooltipOutboxWorn">No puedes colocar items que tienes vestidos en tu Merchant Outbox</string>
+			 <string name="TooltipOutboxCallingCard">No puedes colocar Tarjetas de LLamada en tu Merchant OutBox</string>
+			 <string name="TooltipOutboxFolderLevels">La profundidad de carpetas anidades es superior a 3</string>
+			 <string name="TooltipOutboxTooManyFolders">El recuento de subcarpetas en el nivel superior supera las 20</string>
+			 <string name="TooltipOutboxTooManyObjects">El recuento de items en la carpeta de nivel superior supera los 200</string>
 	
-	<string name="TooltipDragOntoOwnChild">You can't move a folder into its child</string>
-	<string name="TooltipDragOntoSelf">You can't move a folder into itself</string>
+			 <string name="TooltipDragOntoOwnChild">No puedes mover una carpeta a su carpeta secundaria</string>
+			 <string name="TooltipDragOntoSelf">No puedes mover una carpeta en si misma</string>
 
-	<!-- Indicates that an avatar's name or other similar datum is being retrieved. General usage. -->
-	<string name="RetrievingData">Retrieving...</string>
+			 <!-- Indicates that an avatar's name or other similar datum is being retrieved. General usage. -->
+			 <string name="RetrievingData">Recuperando...</string>
 
-	<string name="ReleaseNotes">Release Notes</string>
+			 <string name="ReleaseNotes">Notas de Lanzamiento</string>
 
-	<!-- Indicates something is being loaded. Maybe should be merged with RetrievingData -->
-	<string name="LoadingData">Loading...</string>
+			 <!-- Indicates something is being loaded. Maybe should be merged with RetrievingData -->
+			 <string name="LoadingData">Cargando...</string>
 
 
-	<!-- namecache -->
-	<!-- Avatar name: text shown for LLUUID::null -->
-	<string name="AvatarNameNobody">(nobody)</string>
+			 <!-- namecache -->
+			 <!-- Avatar name: text shown for LLUUID::null -->
+			 <string name="AvatarNameNobody">(nadie)</string>
 
-	<!-- Avatar name: text shown while fetching name -->
-	<string name="AvatarNameWaiting">(waiting)</string>
+			 <!-- Avatar name: text shown while fetching name -->
+			 <string name="AvatarNameWaiting">(esperando)</string>
 
-	<!-- Avatar name: text shown as an alternative to AvatarNameFetching, easter egg. -->
-	<string name="AvatarNameHippos">(hippos)</string>
+			 <!-- Avatar name: text shown as an alternative to AvatarNameFetching, easter egg. -->
+			 <string name="AvatarNameHippos">(hippos)</string>
 
-	<!-- Group name: text shown for LLUUID::null -->
-	<string name="GroupNameNone">(none)</string>
+			 <!-- Group name: text shown for LLUUID::null -->
+			 <string name="GroupNameNone">(ninguno)</string>
 
-	<!-- Asset errors. Used in llassetstorage.cpp, translation from error code to error message. -->
-	<string name="AssetErrorNone">No error</string>
-	<string name="AssetErrorRequestFailed">Asset request: failed</string>
-	<string name="AssetErrorNonexistentFile">Asset request: non-existent file</string>
-	<string name="AssetErrorNotInDatabase">Asset request: asset not found in database</string>
-	<string name="AssetErrorEOF">End of file</string>
-	<string name="AssetErrorCannotOpenFile">Cannot open file</string>
-	<string name="AssetErrorFileNotFound">File not found</string>
-	<string name="AssetErrorTCPTimeout">File transfer timeout</string>
-	<string name="AssetErrorCircuitGone">Circuit gone</string>
-	<string name="AssetErrorPriceMismatch">Viewer and server do not agree on price</string>
-	<string name="AssetErrorUnknownStatus">Unknown status</string>
+			 <!-- Asset errors. Used in llassetstorage.cpp, translation from error code to error message. -->
+			 <string name="AssetErrorNone">Sin errores</string>
+			 <string name="AssetErrorRequestFailed">Petición de Asset: fallida</string>
+			 <string name="AssetErrorNonexistentFile">Petición de Asset: archivo inexistente</string>
+			 <string name="AssetErrorNotInDatabase">Petición de Asset: activo no hallado en la base de datos</string>
+			 <string name="AssetErrorEOF">Fin de archivo</string>
+			 <string name="AssetErrorCannotOpenFile">No se puede abrir el archivo</string>
+			 <string name="AssetErrorFileNotFound">Archivo no encontrado</string>
+			 <string name="AssetErrorTCPTimeout">Tiempo de espera en transferencia de archivo agotado</string>
+			 <string name="AssetErrorCircuitGone">El circuito se ha ido</string>
+			 <string name="AssetErrorPriceMismatch">El Visor y el Servidor no coinciden con el precio</string>
+			 <string name="AssetErrorUnknownStatus">Estado desconocido</string>
 
-	<!-- llvoavatar. Displayed in the avatar's chat bubble -->
-	<string name="AvatarEditingApparance">(Editing Appearance)</string>
-	<string name="AvatarAway">Away</string>
-	<string name="AvatarBusy">Busy</string>
-	<string name="AvatarMuted">Muted</string>
+			 <!-- llvoavatar. Displayed in the avatar's chat bubble -->
+			 <string name="AvatarEditingAppearance">(Editando Apariencia)</string>
+			 <string name="AvatarAway">Ausente</string>
+			 <string name="AvatarBusy">Ocupado</string>
+			 <string name="AvatarMuted">Bloqueado</string>
 
-	<!-- animations -->
-	<string name="anim_express_afraid">Afraid</string>
-	<string name="anim_express_anger">Angry</string>
-	<string name="anim_away">Away</string>
-	<string name="anim_backflip">Backflip</string>
-	<string name="anim_express_laugh">Belly Laugh</string>
-	<string name="anim_express_toothsmile">BigSmile</string>
-	<string name="anim_blowkiss">Blow Kiss</string>
-	<string name="anim_express_bored">Bored</string>
-	<string name="anim_bow">Bow</string>
-	<string name="anim_clap">Clap</string>
-	<string name="anim_courtbow">Court Bow</string>
-	<string name="anim_express_cry">Cry</string>
-	<string name="anim_dance1">Dance 1</string>
-	<string name="anim_dance2">Dance 2</string>
-	<string name="anim_dance3">Dance 3</string>
-	<string name="anim_dance4">Dance 4</string>
-	<string name="anim_dance5">Dance 5</string>
-	<string name="anim_dance6">Dance 6</string>
-	<string name="anim_dance7">Dance 7</string>
-	<string name="anim_dance8">Dance 8</string>
-	<string name="anim_express_disdain">Disdain</string>
-	<string name="anim_drink">Drink</string>
-	<string name="anim_express_embarrased">Embarrassed</string>
-	<string name="anim_angry_fingerwag">Finger Wag</string>
-	<string name="anim_fist_pump">Fist Pump</string>
-	<string name="anim_yoga_float">Floating Yoga</string>
-	<string name="anim_express_frown">Frown</string>
-	<string name="anim_impatient">Impatient</string>
-	<string name="anim_jumpforjoy">Jump For Joy</string>
-	<string name="anim_kissmybutt">Kiss My Butt</string>
-	<string name="anim_express_kiss">Kiss</string>
-	<string name="anim_laugh_short">Laugh</string>
-	<string name="anim_musclebeach">Muscle Beach</string>
-	<string name="anim_no_unhappy">No (Unhappy)</string>
-	<string name="anim_no_head">No</string>
-	<string name="anim_nyanya">Nya-nya-nya</string>
-	<string name="anim_punch_onetwo">One-Two Punch</string>
-	<string name="anim_express_open_mouth">Open Mouth</string>
-	<string name="anim_peace">Peace</string>
-	<string name="anim_point_you">Point at Other</string>
-	<string name="anim_point_me">Point at Self</string>
-	<string name="anim_punch_l">Punch Left</string>
-	<string name="anim_punch_r">Punch Right</string>
-	<string name="anim_rps_countdown">RPS count</string>
-	<string name="anim_rps_paper">RPS paper</string>
-	<string name="anim_rps_rock">RPS rock</string>
-	<string name="anim_rps_scissors">RPS scissors</string>
-	<string name="anim_express_repulsed">Repulsed</string>
-	<string name="anim_kick_roundhouse_r">Roundhouse Kick</string>
-	<string name="anim_express_sad">Sad</string>
-	<string name="anim_salute">Salute</string>
-	<string name="anim_shout">Shout</string>
-	<string name="anim_express_shrug">Shrug</string>
-	<string name="anim_express_smile">Smile</string>
-	<string name="anim_smoke_idle">Smoke Idle</string>
-	<string name="anim_smoke_inhale">Smoke Inhale</string>
-	<string name="anim_smoke_throw_down">Smoke Throw Down</string>
-	<string name="anim_express_surprise">Surprise</string>
-	<string name="anim_sword_strike_r">Sword Strike</string>
-	<string name="anim_angry_tantrum">Tantrum</string>
-	<string name="anim_express_tongue_out">TongueOut</string>
-	<string name="anim_hello">Wave</string>
-	<string name="anim_whisper">Whisper</string>
-	<string name="anim_whistle">Whistle</string>
-	<string name="anim_express_wink">Wink</string>
-	<string name="anim_wink_hollywood">Wink (Hollywood)</string>
-	<string name="anim_express_worry">Worry</string>
-	<string name="anim_yes_happy">Yes (Happy)</string>
-	<string name="anim_yes_head">Yes</string>
+			 <!-- animations -->
+			 <string name="anim_express_afraid">Miedo</string>
+			 <string name="anim_express_anger">Enfado</string>
+			 <string name="anim_away">Ausente</string>
+			 <string name="anim_backflip">alto mortal atrás</string>
+			 <string name="anim_express_laugh">Carcajada</string>
+			 <string name="anim_express_toothsmile">Gran sonrisa</string>
+			 <string name="anim_blowkiss">Mandar un beso</string>
+			 <string name="anim_express_bored">Aburrimiento</string>
+			 <string name="anim_bow">Reverencia</string>
+			 <string name="anim_clap">Aplauso</string>
+			 <string name="anim_courtbow">Reverencia floreada</string>
+			 <string name="anim_express_cry">Llanto</string>
+			 <string name="anim_dance1">Baile 1</string>
+			 <string name="anim_dance2">Baile 2</string>
+			 <string name="anim_dance3">Baile 3</string>
+			 <string name="anim_dance4">Baile 4</string>
+			 <string name="anim_dance5">Baile 5</string>
+			 <string name="anim_dance6">Baile 6</string>
+			 <string name="anim_dance7">Baile 7</string>
+			 <string name="anim_dance8">Baile 8</string>
+			 <string name="anim_express_disdain">Desdén</string>
+			 <string name="anim_drink">Beber</string>
+			 <string name="anim_express_embarrased">Avergonzado</string>
+			 <string name="anim_angry_fingerwag">Negar con el dedo</string>
+			 <string name="anim_fist_pump">Gesto de Victoria</string>
+			 <string name="anim_yoga_float">Yoga flotando</string>
+			 <string name="anim_express_frown">Fruncir el ceño</string>
+			 <string name="anim_impatient">Impaciente</string>
+			 <string name="anim_jumpforjoy">Salto de alegría</string>
+			 <string name="anim_kissmybutt">Bésame el culo</string>
+			 <string name="anim_express_kiss">Besar</string>
+			 <string name="anim_laugh_short">Reír</string>
+			 <string name="anim_musclebeach">Sacar músculo</string>
+			 <string name="anim_no_unhappy">No (con enfado)</string>
+			 <string name="anim_no_head">No</string>
+			 <string name="anim_nyanya">Ña-Ña-Ña</string>
+			 <string name="anim_punch_onetwo">Puñetazo uno-dos</string>
+			 <string name="anim_express_open_mouth">Abrir la boca</string>
+			 <string name="anim_peace">Paz</string>
+			 <string name="anim_point_you">Señalar a otro/a</string>
+			 <string name="anim_point_me">Señalarse</string>
+			 <string name="anim_punch_l">Puñetazo izquierdo</string>
+			 <string name="anim_punch_r">Puñetazo derecho</string>
+			 <string name="anim_rps_countdown">PPT cuenta</string>
+			 <string name="anim_rps_paper">PPT papel</string>
+			 <string name="anim_rps_rock">PPT piedra</string>
+			 <string name="anim_rps_scissors">PPT tijera</string>
+			 <string name="anim_express_repulsed">Rechazo</string>
+			 <string name="anim_kick_roundhouse_r">Patada circular</string>
+			 <string name="anim_express_sad">Triste</string>
+			 <string name="anim_salute">Saludo militar</string>
+			 <string name="anim_shout">Gritar</string>
+			 <string name="anim_express_shrug">Encogerse de hombros</string>
+			 <string name="anim_express_smile">Sonreír</string>
+			 <string name="anim_smoke_idle">Fumar: en la mano</string>
+			 <string name="anim_smoke_inhale">Fumar: Inhalar</string>
+			 <string name="anim_smoke_throw_down">Fumar: tirar el cigarro</string>
+			 <string name="anim_express_surprise">Sorpresa</string>
+			 <string name="anim_sword_strike_r">Estocada</string>
+			 <string name="anim_angry_tantrum">Berrinche</string>
+			 <string name="anim_express_tongue_out">Sacar la lengua</string>
+			 <string name="anim_hello">Agitar la mano</string>
+			 <string name="anim_whisper">Susurrar</string>
+			 <string name="anim_whistle">Silbar</string>
+			 <string name="anim_express_wink">Guiño</string>
+			 <string name="anim_wink_hollywood">Guiño (Hollywood)</string>
+			 <string name="anim_express_worry">Preocuparse</string>
+			 <string name="anim_yes_happy">Sí (contento)</string>
+			 <string name="anim_yes_head">Si</string>
 
-	<string name="texture_loading">Loading...</string>
-	<string name="worldmap_offline">Offline</string>
+			 <string name="texture_loading">Cargando...</string>
+			 <string name="worldmap_offline">Desconectado</string>
 
-	<!-- animations uploading status codes -->
-	<string name="Ok">OK</string>
-	<!-- Chat -->
-	<string name="whisper">whispers:</string>
-	<string name="shout">shouts:</string>
+			 <!-- animations uploading status codes -->
+			 <string name="Ok">OK</string>
+			 <!-- Chat -->
+			 <string name="whisper">Susurros:</string>
+			 <string name="shout">Gritos:</string>
 
-	<!-- Sim Access labels -->
-	<string name="SIM_ACCESS_PG">PG</string>
-	<string name="SIM_ACCESS_MATURE">Mature</string>
-	<string name="SIM_ACCESS_ADULT">Adult</string>
-	<string name="SIM_ACCESS_DOWN">Offline</string>
-	<string name="SIM_ACCESS_MIN">Unknown</string>
+			 <!-- Sim Access labels -->
+			 <string name="SIM_ACCESS_PG">PG</string>
+			 <string name="SIM_ACCESS_MATURE">Mature</string>
+			 <string name="SIM_ACCESS_ADULT">Adulto</string>
+			 <string name="SIM_ACCESS_DOWN">Desconectado</string>
+			 <string name="SIM_ACCESS_MIN">Desconocido</string>
 
-	<!-- For use when we do not have land type back from the server -->
-	<string name="land_type_unknown">(unknown)</string>
+			 <!-- For use when we do not have land type back from the server -->
+			 <string name="land_type_unknown">(Desconocido)</string>
 
-	<!-- Covenant info -->
-	<string name="covenant_never_modified">Last Modified: (never)</string>
-	<string name="covenant_modified">Last Modified: </string>
+			 <!-- Covenant info -->
+			 <string name="covenant_never_modified">Última Modificación: (nunca)</string>
+			 <string name="covenant_modified">Última Modificación: </string>
 
-	<!-- File load/save dialogs -->
-	<string name="all_files">All Files</string>
-	<string name="sound_files">Sounds</string>
-	<string name="animation_files">Animations</string>
-	<string name="image_files">Images</string>
-	<string name="save_file_verb">Save</string>
-	<string name="load_file_verb">Load</string>
-	<string name="targa_image_files">Targa Images</string>
-	<string name="bitmap_image_files">Bitmap Images</string>
-	<string name="avi_movie_file">AVI Movie File</string>
-	<string name="xaf_animation_file">XAF Anim File</string>
-	<string name="xml_file">XML File</string>
-	<string name="raw_file">RAW File</string>
-	<string name="compressed_image_files">Compressed Images</string>
-	<string name="load_files">Load Files</string>
-	<string name="choose_the_directory">Choose Directory</string>
+			 <!-- File load/save dialogs -->
+			 <string name="all_files">Todos los Archivos</string>
+			 <string name="sound_files">Sonidos</string>
+			 <string name="animation_files">Animaciones</string>
+			 <string name="image_files">Imágenes</string>
+			 <string name="save_file_verb">Guardar</string>
+			 <string name="load_file_verb">Cargar</string>
+			 <string name="targa_image_files">Imágenes Targa</string>
+			 <string name="bitmap_image_files">Imágenes de Mapa de Bits</string>
+			 <string name="avi_movie_file">Película AVI</string>
+			 <string name="xaf_animation_file">Animación XAF</string>
+			 <string name="xml_file">Archivo XML</string>
+			 <string name="raw_file">Archivo RAW</string>
+			 <string name="compressed_image_files">Imágenes Comprimidas</string>
+			 <string name="load_files">Cargar Archivos</string>
+			 <string name="choose_the_directory">Seleccionar Directorio</string>
 
  
-	<!-- LSL Usage Hover Tips -->
-  <string name="LSLTipSleepTime">
-Sleeps script for [SLEEP_TIME] seconds.
-  </string>
+			 <!-- LSL Usage Hover Tips -->
+			 <string name="LSLTipSleepTime">
+					Pausa el script por [SLEEP_TIME] segundos.
+			 </string>
 
-  <string name="LSLTipText_llSin">
-float llSin(float theta)
-Returns the sine of theta (theta in radians)
-  </string>
-  <string name="LSLTipText_llCos">
-float llCos(float theta)
-Returns the cosine of theta (theta in radians)
-  </string>
-  <string name="LSLTipText_llTan">
-float llTan(float theta)
+			 <string name="LSLTipText_llSin">
+					float llSin(float theta)
+Devuelve el seno de theta (theta en radianes)
+			 </string>
+			 <string name="LSLTipText_llCos">
+					float llCos(float theta)
+Devuelve el coseno de theta (theta en radianes)
+			 </string>
+			 <string name="LSLTipText_llTan">
+					float llTan(float theta)
 Returns the tangent of theta (theta in radians)
   </string>
   <string name="LSLTipText_llAtan2">
@@ -1952,6 +1955,8 @@ If you continue to receive this message, contact the [SUPPORT_SITE].
   <string name="group_member_status_online">Online</string>
   
   <string name="Chat">Chat</string>
+
+  <string name="DefaultMimeType">none/none</string>
 
  <!-- External editor status codes -->
  <string name="ExternalEditorNotSet">Select an editor using the ExternalEditor setting.</string>

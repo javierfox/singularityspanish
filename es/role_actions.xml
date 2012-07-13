@@ -1,78 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <role_actions>
-	<action_set
-	     description="These Abilities include powers to add and remove group Members, and allow new Members to join without an invitation."
-	     name="Membership">
-		<action description="Invite People to this Group"
-		     longdescription="Invite People to this Group using the &apos;Invite New Person...&apos; button in the Members &amp; Roles tab &gt; Members sub-tab."
-		     name="member invite" value="1" />
-		<action description="Eject Members from this Group"
-		     longdescription="Eject Members from this Group using the &apos;Eject From Group&apos; button in the Members &amp; Roles tab &gt; Members sub-tab. An Owner can eject anyone except another Owner. If you&apos;re not an Owner, a Member can be ejected from a group if, and only if, they&apos;re only in the Everyone Role, and NO other Roles. To remove Members from Roles, you need to have the &apos;Remove Members from Roles&apos; Ability."
-		     name="member eject" value="2" />
+	  <action_set description="Estas capacidades incluyen poderes para añadir o quitar miembros del grupo, y para pemitir que se sumen nuevos miembros sin necesidad de invitación." name="Membership">
+			 <action description="Invitar Personas al Grupo" longdescription="Invitar personas al grupo usando el botón &apos;Invitar a un nuevo miembro&apos; en Miembros y Roles &gt; subpestaña Miembros." name="member invite" value="1" />
+			 <action description="Expulsar a miembros del grupo usando el botón &apos;Expulsar del grupo&apos; en Miembros y Roles &gt; subpestaña Miembros. Un propietario puede expulsar a cualquiera, excepto a otro propietario. Si no eres un propietario, un miembro del grupo puede expulsarte sólo si tiene concedida esta capacidad específica. Para quitar capacidades a los miembros, debes tener la de &apos;Quitar capacidades a miembros&apos;." name="member eject" value="2" />
+			 <action description="Activar/desactivar &apos;Inscripción libre&apos; y cambiar &apos;Cuota de inscripción&apos;" longdescription="Activar/desactivar &apos;Inscripción libre&apos; para permitir o no que se unan sin invitación nuevos miembros, y cambiar la &apos;Cuota de inscripción&apos; en la sección Preferencias del grupo de la pestaña General." name="member options" value="3" />
+	  </action_set>
+	  <action_set description="Estas habilidades incluyen el poder añadir, quitar y cambiar roles, asignarlos a  miembros, y darles capacidades" name="Roles"> 
+			 <action description="Crear nuevos roles" longdescription="Crear nuevos roles en Miembros y Roles &gt; pestaña Roles &gt; botón Crear un rol nuevo." name="role create" value="4" />
+			 <action description="Borrar Roles" longdescription="Borrar roles en Miembros y Roles &gt; pestaña Roles &gt; botón Eliminar el rol." name="role delete" value="5" />
+			 <action description="Cambiar nombres de roles, títulos, descripciones y si los integrantes de lo roles son visibles."
+		     longdescription="Cambiar nombres de roles, títulos, descripciones y si los integrantes de lo roles son visibles. Esto se hace al pié de la pestaña Miembros y Roles &gt; subpestaña Roles luego de seleccionar un rol." name="role properties" value="6" />
+			 <action description="Designar miembros para el rol de Asignador" longdescription="Designar miembros para un rol en la sección Roles asignados de la pestaña Miembros y Roles &gt; subpestaña Miembros. Un miembro con este poder sólo puede asignar a otros el rol que él posee." name="role assign member limited" value="7" />
+			 <action description="Designar miembros para cualquier Rol" longdescription="Designar miembros para cualquier rol en la sección Roles asignados de la pestaña Miembros y Roles &gt; subpestaña Miembros. *AVISO* Todos los miembros con esta capacidad podrán asignarse a sí mismos (y a otros miembros) roles con mayores poderes de los que actualmente tienen. Potencialmente, podrían elevarse hasta poderes cercanos a los del propietario. Asegúrate de lo que estás haciendo antes de otorgar esta capacidad." name="role assign member" value="8" />
+			 <action description="Quitar miembros de los roles" longdescription="Quitar miembros de roles en la sección Capacidades asignadas de Miembros y Roles &gt; subpestaña Roles. No se pueden quitar a los Propietarios." name="role remove member" value="9" />
+		<action description="Añadir o quitar capacidades a los roles" longdescription="Añadir o quitar capacidades a los roles en la sección Capacidades asignadas de Miembros y Roles &gt; subpestaña Roles. *AVISO* Todos los miembros con esta capacidad podrán asignarse a sí mismos -y a otros miembros- roles con mayores poderes de los que actualmente tienen. Potencialmente, podrían elevarse hasta poderes cercanos a los del propietario. Asegúrate de lo que estás haciendo antes de otorgar esta capacidad." name="role change actions" value="10" /> 
+	  </action_set>
+	  <action_set description="Estas capacidades incluyen poderes para modificar la identidad del grupo, como su visibilidad pública, su carta o su emblema." name="Group Identity">
+			 <action
+		     description="Cambiar la carta, emblema y &apos;Mostrar en la búsqueda&apos;" longdescription="Cambiar la carta, emblema y &apos;Mostrar en la búsqueda&apos;, y qué miembros serán visibles en la información del grupo de la pestaña General." name="group change identity" value="11" />
+	  </action_set>
+	  <action_set description="Estas capacidades incluyen poderes para transferir, modificar y vender terrenos del grupo. Ve al menú Mundo &gt; Acerca del terreno, o pulsa con el botón derecho en el terreno y selecciona &apos;Acerca del terreno...&apos;, o pulsa en la información de la parcela en la barra superior del menú." name="Parcel Management">
+			 <action description="Transferir  y comprar terreno para el grupo" longdescription="Transferir y comprar terreno para el grupo. Se hace en Acerca del terreno &gt; pestaña General." name="land deed" value="12" />
+			 <action description="Abandonar terreno a favor de Governor Linden"
+		     longdescription="Abandonar al terreno a favor de Governor Linden. *AVISO* Todos los miembros del Rol con esta capacidad pueden abandonar terreno perteneciente al grupo en Acerca del terreno &gt; pestaña General, devolviendo la posesión a Linden ¡gratuitamente! Asegúrate de lo que estás haciendo antes de otorgar esta capacidad." name="land release" value="13" />
+			 <action description="Vender terreno"
+		     longdescription="Vender terreno. *AVISO* Todos los miembros del ROl con esta capacidad pueden vender terreno perteneciente al grupo -¡en la forma en que quieran!- en Acerca del terreno &gt; pestaña General. Asegúrate de lo que estás haciendo antes de otorgar esta capacidad." name="land set sale info" value="14" />
+			 <action description="Dividir y unir parcelas" longdescription="Dividir y unir parcelas. Se hace pulsando con el botón derecho en el terreno, &apos;Modificar el terreno&apos;, y dibujando en el terreno con el ratón lo que se quiere seleccionar. Para dividir, selecciona la parte que quieres separar y pulsa &apos;Subdividir...&apos;. Para unir, selecciona dos o más parcelas contiguas y pulsa &apos;Unir...&apos;." name="land divide join" value="15" />
+	  </action_set>
+	  <action_set description="Estas capacidades incluyen poder cambiar el nombre de la parcela y su configuración pública, también si se muestra en la Búsqueda y las opciones del punto de llegada y el de teleporte." name="Parcel Identity">
+			 <action description="Activar/Desactivar &apos;Mostrar en Búsqueda&apos; y el definir la Categoría" longdescription="Activar/Desactivar el &apos;Mostrar en Búsqueda&apos; y en que Categoría se mostrará en Acerca del terreno &gt; pestaña Opciones." name="land find places" value="17" />
 		<action
-		     description="Toggle &apos;Open Enrollment&apos; and change &apos;Signup Fee&apos;"
-		     longdescription="Toggle &apos;Open Enrollment&apos; to let new Members join without an invitation, and change &apos;Signup Fee&apos; in the Group Preferences section of the General tab."
-		     name="member options" value="3" />
-	</action_set>
-	<action_set
-	     description="These Abilities include powers to add, remove, and change group Roles, add and remove Members in Roles, and assign Abilities to Roles."
-	     name="Roles">
-		<action description="Create new Roles"
-		     longdescription="Create new Roles in the Members &amp; Roles tab &gt; Roles sub-tab."
-		     name="role create" value="4" />
-		<action description="Delete Roles"
-		     longdescription="Delete Roles in the Members &amp; Roles tab &gt; Roles sub-tab."
-		     name="role delete" value="5" />
-		<action description="Change Role names, titles, descriptions, and whether Role members are publicly visible"
-		     longdescription="Change Role names, titles, descriptions, and whether Role members are publicly visible. This is done at the bottom of the the Members &amp; Roles tab &gt; Roles sub-tab after selecting a Role."
-		     name="role properties" value="6" />
-		<action description="Assign Members to Assigner&apos;s Roles"
-		     longdescription="Assign Members to Roles in the Assigned Roles section of the Members &amp; Roles tab &gt; Members sub-tab. A Member with this Ability can only add Members to a Role the assigner is already in."
-		     name="role assign member limited" value="7" />
-		<action description="Assign Members to Any Role"
-		     longdescription="Assign Members to Any Role in the Assigned Roles section of the Members &amp; Roles tab &gt; Members sub-tab. *WARNING* Any Member in a Role with this Ability can assign themselves--and any other non-Owner Member--to Roles that have more powers than they currently have, potentially elevating themselves to near-Owner power. Be sure you know what you&apos;re doing before assigning this Ability."
-		     name="role assign member" value="8" />
-		<action description="Remove Members from Roles"
-		     longdescription="Remove Members from Roles in the Assigned Roles section of the Members &amp; Roles tab &gt; Members sub-tab. Owners can&apos;t be removed."
-		     name="role remove member" value="9" />
-		<action description="Assign and Remove Abilities in Roles"
-		     longdescription="Assign and Remove Abilities in Roles in the Allowed Abilities section of the Members &amp; Roles tab &gt; Roles sub-tab. *WARNING* Any Member in a Role with this Ability can assign themselves--and any other non-Owner Member--all Abilities, potentially elevating themselves to near-Owner power. Be sure you know what you&apos;re doing before assigning this Ability."
-		     name="role change actions" value="10" />
-	</action_set>
-	<action_set
-	     description="These Abilities include powers to modify this group&apos;s identity, such as changing public visibility, charter, and insignia."
-	     name="Group Identity">
-		<action
-		     description="Change Charter, Insignia, and &apos;Show in search&apos;"
-		     longdescription="Change Charter, Insignia, and &apos;Show in search&apos;. This is done in the General tab."
-		     name="group change identity" value="11" />
-	</action_set>
-	<action_set
-	     description="These Abilities include powers to deed, modify, and sell land in this group&apos;s land holdings. To get to the About Land window, right-click the ground and select &apos;About Land...&apos;, or click the parcel info in the menu bar."
-	     name="Parcel Management">
-		<action description="Deed land and buy land for group"
-		     longdescription="Deed land and buy land for group. This is done in About Land &gt; General tab."
-		     name="land deed" value="12" />
-		<action description="Abandon land to Governor Linden"
-		     longdescription="Abandon land to Governor Linden. *WARNING* Any Member in a Role with this Ability can abandon group-owned land in About Land &gt; General tab, reverting it to Linden ownership without a sale! Be sure you know what you&apos;re doing before assigning this Ability."
-		     name="land release" value="13" />
-		<action description="Set land for sale info"
-		     longdescription="Set land for sale info. *WARNING* Any Member in a Role with this Ability can sell group-owned land in About Land &gt; General tab as they wish! Be sure you know what you&apos;re doing before assigning this Ability."
-		     name="land set sale info" value="14" />
-		<action description="Subdivide and join parcels"
-		     longdescription="Subdivide and join parcels. This is done by right-clicking the ground, &apos;Edit Terrain&apos;, and dragging your mouse on the land to make a selection. To subdivide, select what you want to split and click &apos;Subdivide...&apos;. To join, select two or more contiguous parcels and click &apos;Join...&apos;. "
-		     name="land divide join" value="15" />
-	</action_set>
-	<action_set
-	     description="These Abilities include powers to change the parcel name and publish settings, Find directory visibility, and landing point &amp; TP routing options."
-	     name="Parcel Identity">
-		<action description="Toggle &apos;Show in Find Places&apos; and set category"
-		     longdescription="Toggle &apos;Show in Find Places&apos; and setting a parcel&apos;s category in About Land &gt; Options tab."
-		     name="land find places" value="17" />
-		<action
-		     description="Change parcel name, description, and &apos;Show in search&apos; settings"
-		     longdescription="Change parcel name, description, and &apos;Show in search&apos; settings. This is done in About Land &gt; Options tab."
-		     name="land change identity" value="18" />
+		     description="Cambiar el nombre de la parcela, la descripción, y la configuración de &apos;Mostrar en Búsqueda&apos;" longdescription="Cambiar el nombre y descripción de la parcela, y la configuración de &apos;Mostrar en Búsqueda&apos;. Se hace en Acerca del terreno &gt; pestaña Opciones." name="land change identity" value="18" />
 		<action description="Set landing point and set teleport routing"
 		     longdescription="On a group-owned parcel, Members in a Role with this Ability can set a landing point to specify where incoming teleports arrive, and also set teleport routing for further control. This is done in About Land &gt; Options tab."
 		     name="land set landing point" value="19" />
