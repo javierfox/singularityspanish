@@ -3,6 +3,6 @@
 	<button label="Iniciar" label_selected="Iniciar" name="start_btn"/>
 	<button label="Cerrar" label_selected="Cerrar" name="close_btn"/>
 	<string name="online_descriptor">
-		(en línea)
+		(Conectado)
 	</string>
 </floater>
