@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <panel label="Gráficos" name="Display panel">
-	<button label="?" name="GraphicsPreferencesHelpButton"/>
-	<check_box label="Ejecutar el Visor en Ventana" name="windowed mode" tool_tip="Si setá desmarcado, el visor se ejecutará a pantalla completa cuando inicies sesión."/>
+	<check_box label="Ejecutar el Visor en Ventana" name="windowed mode" tool_tip="Si está desmarcado, el visor se ejecutará a pantalla completa cuando inicies sesión."/>
+	<button label="Valores Predeterminados" name="Defaults" tool_tip="Reiniciar a los valores gráficos recomendados" width="170"/>		
 	<text name="WindowSizeLabel">
-		Tamaño de Ventana:
+		Tamaño de la Ventana:
 	</text>
 	<combo_box name="windowsize combo">
 		<combo_item name="800x600">
@@ -19,19 +19,36 @@
 			1024x768
 		</combo_item>
 		<combo_item name="1280x720">
-			1280x720 (HDV720)
+			1280x720 (HD)
+		</combo_item>
+		<combo_item name="1366x768">
+			1366x768
+		</combo_item>
+		<combo_item name="1280x800">
+			1280x800
+		</combo_item>
+		<combo_item name="1440x900">
+			1440x900
+		</combo_item>
+		<combo_item name="1600x900">
+			1600x900 (HD+)
+		</combo_item>
+		<combo_item name="1680×1050">
+			1680×1050
 		</combo_item>
 		<combo_item name="1440x1080">
 			1440x1080 (HDV1080)
 		</combo_item>
 		<combo_item name="1920x1080">
-			1920x1080 (HD1080)
+			1920x1080 (Full-HD)
 		</combo_item>
+		<combo_item name="2560×1440">
+			2560×1440
+		</combo_item>		
 	</combo_box>
 	<text name="DisplayResLabel">
 		Resolución de Pantalla:
 	</text>
-	<combo_box name="fullscreen combo" left="130" />
 	<text name="AspectRatioLabel1">
 		Proporción:
 	</text>
@@ -49,32 +66,32 @@
 			16:9 (TV Pantalla ancha)
 		</combo_item>
 	</combo_box>
-	<button label="Predeterminado" name="Defaults" width="110"/>	
+
 	<check_box label="Detectar proporción automáticamente" name="aspect_auto_detect" left="280"/>
-	<text name="QualityText">
-		Calidad y Rendimiento:
-	</text>
-	<text name="FasterText"  left="130">
-		Rápido
-	</text>
-	<text name="ShadersPrefText">
-		Bajo
-	</text>
-	<text name="ShadersPrefText2">
-		Medio
-	</text>
-	<text name="ShadersPrefText3">
-		Alto
-	</text>
-	<text name="ShadersPrefText4">
-		Ultra
-	</text>
-	<text name="QualityText2">
-		Alta Calidad
-	</text>
-	<check_box label="Personalizar" name="CustomSettings"/>
 	<tab_container name="graphics_tab">
-		<panel label="General" name="Main">	
+		<panel label="General" name="Main">
+			<text name="QualityText">
+				Calidad y Rendimiento:
+			</text>
+			<text name="FasterText"  left="130">
+				Rápido
+			</text>
+			<text name="ShadersPrefText">
+				Bajo
+			</text>
+			<text name="ShadersPrefText2">
+				Medio
+			</text>
+			<text name="ShadersPrefText3">
+				Alto
+			</text>
+			<text name="ShadersPrefText4">
+				Ultra
+			</text>
+			<text name="QualityText2">
+				Alta Calidad
+			</text>
+			<check_box left="385" label="Personalizar" name="CustomSettings"/>
 			<text name="ShadersText">
 				Sombreado:
 			</text>
@@ -141,6 +158,9 @@
 			<text name="AvatarPhysicsDetailText">
 				Apagada
 			</text>
+			<text name="DrawDistanceMeterText1">
+				m
+			</text>			
 			<text name="DrawDistanceMeterText2">
 				m
 			</text>
@@ -148,6 +168,9 @@
 			<slider label="Máximo de Partículas:" name="MaxParticleCount"/>
 			<slider label="Máx No Simulados" name="AvatarMaxVisible"/>
 			<slider label="PostProcesado:" name="RenderPostProcess"/>
+			<text name="PostProcessText">
+				Bajo
+			</text>			
 			<text name="MeshDetailText">
 				Nivel de Detalles:
 			</text>
@@ -157,9 +180,6 @@
 			<slider label="  Avatares:" name="AvatarMeshDetail"/>
 			<slider label="  Terreno:" name="TerrainMeshDetail"/>
 			<slider label="  Cielo:" name="SkyMeshDetail"/>
-			<text name="PostProcessText">
-				Bajo
-			</text>
 			<text name="ObjectMeshDetailText">
 				Bajo
 			</text>
@@ -195,12 +215,8 @@
 					Alto
 				</radio_item>
 			</radio_group>
-			<button label="Reiniciar" name="Defaults"/>
-			<button label="Hardware" name="GraphicsHardwareButton"/>
-			<string name="resolution_format">[RES_X] x [RES_Y]</string>
-			<string name="aspect_ratio_text">[NUM]:[DEN]</string>
 		</panel>
-
+		<!-- =========================== -->
 		<panel name="Hardware" label="Hardware">
 			<check_box label="Filtrado Anisotrópico (más lento si se activa)" name="ani"/>
 			<text name="Antialiasing:">
@@ -223,11 +239,11 @@
 					16x
 				</combo_item>
 			</combo_box>
-			<spinner label="Gama:" name="gamma" width="202" tool_tip="(brillo, más bajo es mayor brlilo)"/>
+			<spinner label="Memoria p/ Texturas (MB):" name="GrapicsCardTextureMemory" tool_tip="Cantidad de memoria asignada a las texturas. Por defecto es la memoria de la tarjeta de vídeo. Reducir esta cantidad puede mejorar el rendimiento, pero también puede hacer que las texturas se vean borrosas."/>
 			<check_box  label="Activar OpenGL Vertex Buffer Objects" name="vbo" tool_tip="Habilitar esta opción en hardware moderno puede proporcionar una mejora en el rendimiento. Sin embargo, el hardware antiguo ofrece una pobre implementación de VBOs y puede causar fallos cuando esta opcíon esté activada."/>
 			<check_box label="Activar Flujo VBOs" name="vbo_stream" tool_tip="Desactivar esta opción puede mejorar el rendimiento cuando se habilita VBO. Desactivarlo produce una mejora visible en diversas GPUs de AMD."/>
 			<check_box label="Activar OpenGL Frame Buffer Objects" name="fbo" tool_tip="Habilitar esta opción en hardware moderno puede proporcionar una mejora en el rendimiento. Sin embargo, si se habilita en combinación con el antialiasing en GPUs de AMD pueden causar problemas de mezcla de texturas. Este ajuste es necesario para renderizado diferido."/>
-			<spinner label="Memoria p/ Texturas (MB):" name="GrapicsCardTextureMemory" tool_tip="Cantidad de memoria asignada a las texturas. Por defecto es la memoria de la tarjeta de vídeo. Reducir esta cantidad puede mejorar el rendimiento, pero también puede hacer que las texturas se vean borrosas."/>
+			<spinner label="Gama:" name="gamma" width="202" tool_tip="(brillo, más bajo es mayor brlilo)"/>
 			<spinner label="Intensidad de la niebla:" name="fog"/>
 			<text name="note">
 				Nota: Las configuraciones de Gama e 
